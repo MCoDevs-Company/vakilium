@@ -42,3 +42,8 @@ android {
 flutter {
     source = "../.."
 }
+
+base {
+    // Use the replacement property archivesName (formerly archivesBaseName) :contentReference[oaicite:7]{index=7}
+    archivesName.set("vakilium_${android.defaultConfig.versionName}_(${android.defaultConfig.versionCode})")
+}
