@@ -11,7 +11,7 @@ class LanguageSelector extends StatefulWidget {
 
   static Map<String, _LanguageMetadata> _languageMetadata = <String, _LanguageMetadata>{
     'ru': _LanguageMetadata(label: "Русский", flag: Assets.images.flagRu),
-    'en': _LanguageMetadata(label: "O'zbek", flag: Assets.images.flagRu),
+    'en': _LanguageMetadata(label: "O'zbek", flag: Assets.images.flagUz),
   };
 
   static final List<_LanguageOption> _options = List.unmodifiable(

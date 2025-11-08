@@ -30,11 +30,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/flag_ru.png
   AssetGenImage get flagRu => const AssetGenImage('assets/images/flag_ru.png');
 
+  /// File path: assets/images/flag_uz.png
+  AssetGenImage get flagUz => const AssetGenImage('assets/images/flag_uz.png');
+
   /// File path: assets/images/vakilium.png
   AssetGenImage get vakilium => const AssetGenImage('assets/images/vakilium.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [flagRu, vakilium];
+  List<AssetGenImage> get values => [flagRu, flagUz, vakilium];
 }
 
 class Assets {
