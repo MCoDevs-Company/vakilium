@@ -26,7 +26,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     success: Color(0xFF17B26A),
     error: Color(0xFFF04438),
     transparent: Colors.transparent,
-    primary: Color(0xFFD83A88),
+    primary: Color(0xFF642FF4),
     secondary: Color(0x29D83A88),
   );
 
@@ -36,7 +36,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     success: Color(0xFF17B26A),
     error: Color(0xFFF04438),
     transparent: Colors.transparent,
-    primary: Color(0xFFD83A88),
+    primary: Color(0xFF642FF4),
     secondary: Color(0x29D83A88),
   );
 

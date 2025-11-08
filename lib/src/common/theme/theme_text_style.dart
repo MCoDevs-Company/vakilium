@@ -19,6 +19,7 @@ final class ThemeTextStyles extends ThemeExtension<ThemeTextStyles> {
     required this.interW500s24,
     required this.interW400s16,
     required this.interW400s22,
+    required this.interW600s20,
     required this.interW300s22,
     required this.interW300s26,
     required this.interW400s30,
@@ -47,6 +48,7 @@ final class ThemeTextStyles extends ThemeExtension<ThemeTextStyles> {
   final TextStyle interW400s18;
   final TextStyle interW500s20;
   final TextStyle interW500s24;
+  final TextStyle interW600s20;
   final TextStyle interW300s26;
   final TextStyle interW400s30;
   final TextStyle interW300s30;
@@ -82,6 +84,12 @@ final class ThemeTextStyles extends ThemeExtension<ThemeTextStyles> {
       fontWeight: FontWeight.w400,
       color: _lightThemeTextStyleColor,
       fontSize: 16,
+      fontFamily: FontFamily.inter,
+    ),
+    interW600s20: TextStyle(
+      fontWeight: FontWeight.w600,
+      color: _lightThemeTextStyleColor,
+      fontSize: 20,
       fontFamily: FontFamily.inter,
     ),
     interW500s16: TextStyle(
@@ -220,6 +228,12 @@ final class ThemeTextStyles extends ThemeExtension<ThemeTextStyles> {
       fontFamily: FontFamily.inter,
     ),
     interW400s16: TextStyle(
+      fontWeight: FontWeight.w400,
+      color: _darkThemeTextStyleColor,
+      fontSize: 16,
+      fontFamily: FontFamily.inter,
+    ),
+    interW600s20: TextStyle(
       fontWeight: FontWeight.w400,
       color: _darkThemeTextStyleColor,
       fontSize: 16,
@@ -374,6 +388,7 @@ final class ThemeTextStyles extends ThemeExtension<ThemeTextStyles> {
     TextStyle? interW300s14,
     TextStyle? interW300s18,
     TextStyle? interW500s13,
+    TextStyle? interW600s20,
     TextStyle? interW300s30,
     TextStyle? interW300s12,
     TextStyle? interW400s21,
@@ -404,6 +419,7 @@ final class ThemeTextStyles extends ThemeExtension<ThemeTextStyles> {
     interW400s21: interW400s21 ?? this.interW400s21,
     interW300s15: interW300s15 ?? this.interW300s15,
     interW300s13: interW300s13 ?? this.interW300s13,
+    interW600s20: interW600s20 ?? this.interW600s20,
   );
 
   @override
@@ -435,5 +451,6 @@ final class ThemeTextStyles extends ThemeExtension<ThemeTextStyles> {
           interW400s21: TextStyle.lerp(interW400s21, other.interW400s21, t)!,
           interW300s15: TextStyle.lerp(interW300s15, other.interW300s15, t)!,
           interW300s13: TextStyle.lerp(interW300s13, other.interW300s13, t)!,
+          interW600s20: TextStyle.lerp(interW600s20, other.interW600s20, t)!,
         );
 }

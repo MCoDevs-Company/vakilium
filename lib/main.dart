@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:vakilium/src/common/app/app.dart';
+import 'package:vakilium/src/common/app/init.dart';
 
-void main() => runApp(const App());
+Future<void> main() async => await Init.run();

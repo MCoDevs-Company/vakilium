@@ -22,6 +22,7 @@ final class LocalSource extends PreferenceDao implements UserDataSource, Localiz
   PreferenceEntry<String> get _refreshTokenKey => stringEntry(key: 'user.refresh_key');
   PreferenceEntry<String> get _localizationKey => stringEntry(key: 'settings.localization');
   PreferenceEntry<String> get _themeKey => stringEntry(key: 'settings.theme');
+
   /// *** GETTERS ***
   /// Encrypted values using [SecureStore]
   @override
@@ -53,14 +54,19 @@ final class LocalSource extends PreferenceDao implements UserDataSource, Localiz
   @override
   Locale get localization {
     final locale = _localizationKey.read();
-    if (locale == null) return Locale(_defaultLocale);
-    final [languageCode, scriptCode] = locale.split('-');
-    return Locale.fromSubtags(languageCode: languageCode, scriptCode: scriptCode.isEmpty ? null : scriptCode);
+    if (locale == null) return Locale.fromSubtags(languageCode: _defaultLocale);
+    final languageSplits = locale.split('-');
+    final languageCode = languageSplits.first;
+    final scriptCode = languageSplits.length > 1 ? languageSplits.last : null;
+    return Locale.fromSubtags(languageCode: languageCode, scriptCode: scriptCode);
   }
 
   @override
-  Future<void> setLocalization(Locale locale) async =>
-      await _localizationKey.set('${locale.languageCode}-${locale.scriptCode}');
+  Future<void> setLocalization(Locale locale) async {
+    var localeString = locale.languageCode;
+    if (locale.scriptCode != null) localeString += '-${locale.scriptCode}';
+    await _localizationKey.set(localeString);
+  }
 
   @override
   Future<void> setTheme(ThemeMode mode) async => await _themeKey.set(mode.name);

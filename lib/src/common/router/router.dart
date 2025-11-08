@@ -15,6 +15,7 @@ sealed class Routes {
         path: login,
         name: login,
         pageBuilder: (context, state) => CustomTransitionPage(
+          transitionDuration: Durations.extralong2,
           child: const LoginScreen(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) =>
               FadeTransition(opacity: animation, child: child),

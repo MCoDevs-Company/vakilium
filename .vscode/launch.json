@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        /// ─── iOS Launch Configurations ───
+        {
+            "name": "vakilium",
+            "request": "launch",
+            "type": "dart",
+            "cwd": "${workspaceFolder}",
+            "noDebug": true,
+            "args": [
+                "--dart-define-from-file=config/development.json",
+            ],
+            "env": {}
+        },
+        {
+            "name": "vakilium (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--dart-define-from-file=config/development.json",
+            ],
+            "env": {}
+        },
+        {
+            "name": "vakilium (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--dart-define-from-file=config/production.json",
+            ],
+            "env": {}
+        },
+    ]
+}
