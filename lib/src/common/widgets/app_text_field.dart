@@ -1,30 +1,90 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
 
-class AppTextField extends StatelessWidget {
-  const AppTextField({super.key});
+class AppTextField extends StatefulWidget {
+  const AppTextField({
+    super.key,
+    this.obscureText = false,
+    this.controller,
+    this.label,
+    this.hintText,
+    this.inputFormatter,
+    this.keyboardType,
+  });
+
+  final String? label;
+  final String? hintText;
+  final TextEditingController? controller;
+  final TextInputFormatter? inputFormatter;
+  final TextInputType? keyboardType;
+  final bool obscureText;
+
+  @override
+  State<AppTextField> createState() => _AppTextFieldState();
+}
+
+class _AppTextFieldState extends State<AppTextField> {
+  late final ValueNotifier<bool> _obscureText;
+
+  @override
+  void initState() {
+    _obscureText = ValueNotifier<bool>(widget.obscureText);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _obscureText.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(context.l10n.phoneNumber, style: context.textTheme.interW500s14.copyWith(color: const Color(0xFF080A15))),
-      Dimension.hBox8,
-      TextFormField(
-        style: context.textTheme.interW400s14,
-        decoration: InputDecoration(
-          isDense: true,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
-          filled: true,
-          fillColor: const Color(0xFFF2F4F7),
-          hintText: context.l10n.enterPhoneNumber,
-          hintStyle: context.textTheme.interW400s14.copyWith(color: const Color(0xFF98A2B3)),
-          border: const OutlineInputBorder(borderRadius: Dimension.rAll8, borderSide: BorderSide.none),
-          enabledBorder: const OutlineInputBorder(borderRadius: Dimension.rAll8, borderSide: BorderSide.none),
-          focusedBorder: const OutlineInputBorder(borderRadius: Dimension.rAll8, borderSide: BorderSide.none),
+      if (widget.label != null) ...[
+        Text(widget.label!, style: context.textTheme.interW500s14.copyWith(color: const Color(0xFF080A15))),
+        Dimension.hBox8,
+      ],
+      ValueListenableBuilder(
+        valueListenable: _obscureText,
+        builder: (context, isObscure, child) => TextFormField(
+          obscureText: isObscure,
+          controller: widget.controller,
+          style: context.textTheme.interW400s14,
+          inputFormatters: switch (widget.inputFormatter) {
+            TextInputFormatter inputFormatter => [inputFormatter],
+            _ => null,
+          },
+          keyboardType: widget.keyboardType,
+          decoration: InputDecoration(
+            // Padding
+            isDense: true,
+            contentPadding: Dimension.pH12V11,
+
+            // Fill
+            filled: true,
+            fillColor: context.color.textFieldBackground,
+
+            // Hint
+            hintText: widget.hintText,
+            hintStyle: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
+
+            suffixIcon: const FlutterLogo(),
+
+            // Borders
+            border: _getBorder(),
+            enabledBorder: _getBorder(),
+            focusedBorder: _getBorder(),
+            errorBorder: _getBorder(borderSide: BorderSide(color: context.color.error)),
+          ),
         ),
       ),
     ],
   );
+
+  OutlineInputBorder _getBorder({BorderSide borderSide = BorderSide.none}) =>
+      OutlineInputBorder(borderRadius: Dimension.rAll8, borderSide: borderSide);
 }

@@ -10,6 +10,8 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     required this.transparent,
     required this.primary,
     required this.secondary,
+    required this.textFieldBackground,
+    required this.hintText,
   });
 
   final Color white;
@@ -19,25 +21,31 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
   final Color transparent;
   final Color primary;
   final Color secondary;
+  final Color textFieldBackground;
+  final Color hintText;
 
   static const ThemeColors light = ThemeColors(
     white: Colors.white,
     black: Colors.black,
     success: Color(0xFF17B26A),
-    error: Color(0xFFF04438),
+    error: Color(0xFFF76659),
     transparent: Colors.transparent,
     primary: Color(0xFF642FF4),
     secondary: Color(0x29D83A88),
+    textFieldBackground: Color(0xFFF2F4F7),
+    hintText: Color(0xFF98A2B3),
   );
 
   static const ThemeColors dark = ThemeColors(
     white: Color(0xFF1C1C1E),
     black: Colors.black,
     success: Color(0xFF17B26A),
-    error: Color(0xFFF04438),
+    error: Color(0xFFF76659),
     transparent: Colors.transparent,
     primary: Color(0xFF642FF4),
     secondary: Color(0x29D83A88),
+    textFieldBackground: Color(0xFFF2F4F7),
+    hintText: Color(0xFF98A2B3),
   );
 
   @override
@@ -49,6 +57,8 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     Color? transparent,
     Color? primary,
     Color? secondary,
+    Color? textFieldBackground,
+    Color? hintText,
   }) => ThemeColors(
     white: white ?? this.white,
     black: black ?? this.black,
@@ -57,6 +67,8 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     transparent: transparent ?? this.transparent,
     primary: primary ?? this.primary,
     secondary: secondary ?? this.secondary,
+    textFieldBackground: textFieldBackground ?? this.textFieldBackground,
+    hintText: hintText ?? this.hintText,
   );
 
   @override
@@ -70,5 +82,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
           secondary: Color.lerp(secondary, other.secondary, t)!,
           success: Color.lerp(success, other.success, t)!,
           error: Color.lerp(error, other.error, t)!,
+          textFieldBackground: Color.lerp(textFieldBackground, other.textFieldBackground, t)!,
+          hintText: Color.lerp(hintText, other.hintText, t)!,
         );
 }
