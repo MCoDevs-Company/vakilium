@@ -68,7 +68,7 @@ dependencies: get ## Check all types of outdated dependencies
 
 .PHONY: get
 get: ## Get dependencies
-	@melos bootstrap
+	@melos boot
 
 # ──────────────────────────────────
 # 🎨 CODE STYLE & FORMATTING

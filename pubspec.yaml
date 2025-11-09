@@ -2,7 +2,7 @@ name: vakilium
 description: "A new Flutter project."
 publish_to: "none"
 
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ^3.9.2
@@ -99,9 +99,9 @@ melos:
   # Define scripts (commands) you can run in your workspace
   scripts:
     # Bootstraps the workspace: installs dependencies and links packages
-    bootstrap:
+    boot:
       description: "Install dependencies & link packages for all packages"
-      run: melos bootstrap --no-default-excludes
+      run: melos bootstrap
 
     # Analyze all Dart/Flutter code
     analyze:

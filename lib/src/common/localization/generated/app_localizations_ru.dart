@@ -34,4 +34,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get enterPhoneNumber => 'Введите номер телефона';
+
+  @override
+  String get registerTitle => 'Регистрация';
+
+  @override
+  String get registerAgreement => 'Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения';
 }

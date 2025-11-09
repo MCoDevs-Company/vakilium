@@ -34,4 +34,11 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get enterPhoneNumber => 'Telefon raqamni kiriting';
+
+  @override
+  String get registerTitle => 'Ro\'yxatdan o\'tish';
+
+  @override
+  String get registerAgreement =>
+      'Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz';
 }

@@ -28,9 +28,7 @@ class GeneratedLocalization {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<GeneratedLocalization> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -51,10 +49,7 @@ class GeneratedLocalization {
   }
 
   static GeneratedLocalization? maybeOf(BuildContext context) {
-    return Localizations.of<GeneratedLocalization>(
-      context,
-      GeneratedLocalization,
-    );
+    return Localizations.of<GeneratedLocalization>(context, GeneratedLocalization);
   }
 
   /// `ru_RU`
@@ -84,52 +79,27 @@ class GeneratedLocalization {
 
   /// `Войти в систему`
   String get loginTitle {
-    return Intl.message(
-      'Войти в систему',
-      name: 'loginTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Войти в систему', name: 'loginTitle', desc: '', args: []);
   }
 
   /// `Забыли пароль?`
   String get forgotPassword {
-    return Intl.message(
-      'Забыли пароль?',
-      name: 'forgotPassword',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Забыли пароль?', name: 'forgotPassword', desc: '', args: []);
   }
 
   /// `Номер телефона`
   String get phoneNumber {
-    return Intl.message(
-      'Номер телефона',
-      name: 'phoneNumber',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Номер телефона', name: 'phoneNumber', desc: '', args: []);
   }
 
   /// `Введите номер телефона`
   String get enterPhoneNumber {
-    return Intl.message(
-      'Введите номер телефона',
-      name: 'enterPhoneNumber',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Введите номер телефона', name: 'enterPhoneNumber', desc: '', args: []);
   }
 
   /// `Регистрация`
   String get registerTitle {
-    return Intl.message(
-      'Регистрация',
-      name: 'registerTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Регистрация', name: 'registerTitle', desc: '', args: []);
   }
 
   /// `Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения`
@@ -143,22 +113,17 @@ class GeneratedLocalization {
   }
 }
 
-class AppLocalizationDelegate
-    extends LocalizationsDelegate<GeneratedLocalization> {
+class AppLocalizationDelegate extends LocalizationsDelegate<GeneratedLocalization> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[
-      Locale.fromSubtags(languageCode: 'ru'),
-      Locale.fromSubtags(languageCode: 'uz'),
-    ];
+    return const <Locale>[Locale.fromSubtags(languageCode: 'ru'), Locale.fromSubtags(languageCode: 'uz')];
   }
 
   @override
   bool isSupported(Locale locale) => _isSupported(locale);
   @override
-  Future<GeneratedLocalization> load(Locale locale) =>
-      GeneratedLocalization.load(locale);
+  Future<GeneratedLocalization> load(Locale locale) => GeneratedLocalization.load(locale);
   @override
   bool shouldReload(AppLocalizationDelegate old) => false;
 

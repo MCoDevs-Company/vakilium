@@ -12,5 +12,4 @@ class AuthRepositoryImpl implements AuthRepository {
     // TODO: implement register
     throw UnimplementedError();
   }
-  
 }

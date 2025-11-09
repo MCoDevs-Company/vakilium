@@ -22,12 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
-      "Telefon raqamni kiriting",
-    ),
-    "forgotPassword": MessageLookupByLibrary.simpleMessage(
-      "Parolni unutdingiz?",
-    ),
+    "enterPhoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqamni kiriting"),
+    "forgotPassword": MessageLookupByLibrary.simpleMessage("Parolni unutdingiz?"),
     "language": MessageLookupByLibrary.simpleMessage("O\'zbek"),
     "languageCode": MessageLookupByLibrary.simpleMessage("uz"),
     "localeCode": MessageLookupByLibrary.simpleMessage("uz"),
@@ -38,8 +34,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "registerAgreement": MessageLookupByLibrary.simpleMessage(
       "Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz",
     ),
-    "registerTitle": MessageLookupByLibrary.simpleMessage(
-      "Ro\'yxatdan o\'tish",
-    ),
+    "registerTitle": MessageLookupByLibrary.simpleMessage("Ro\'yxatdan o\'tish"),
   };
 }
