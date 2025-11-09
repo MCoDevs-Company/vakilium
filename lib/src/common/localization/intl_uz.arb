@@ -1,0 +1,12 @@
+{
+  "@@locale": "uz",
+  "localeName": "uz_UZ",
+  "localeCode": "uz",
+  "localeScriptCode": "",
+  "languageCode": "uz",
+  "language": "O'zbek",
+  "loginTitle": "Tizimga kirish",
+  "forgotPassword": "Parolni unutdingiz?",
+  "phoneNumber": "Telefon raqam",
+  "enterPhoneNumber": "Telefon raqamni kiriting"
+}

@@ -5,8 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'app_localizations_en.dart';
 import 'app_localizations_ru.dart';
+import 'app_localizations_uz.dart';
 
 // ignore_for_file: type=lint
 
@@ -91,39 +91,63 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('en'),
-    Locale('ru')
+    Locale('ru'),
+    Locale('uz')
   ];
 
   /// No description provided for @localeName.
   ///
-  /// In en, this message translates to:
-  /// **'en_US'**
+  /// In ru, this message translates to:
+  /// **'ru_RU'**
   String get localeName;
 
   /// No description provided for @localeCode.
   ///
-  /// In en, this message translates to:
-  /// **'en'**
+  /// In ru, this message translates to:
+  /// **'ru'**
   String get localeCode;
 
   /// No description provided for @localeScriptCode.
   ///
-  /// In en, this message translates to:
+  /// In ru, this message translates to:
   /// **''**
   String get localeScriptCode;
 
   /// No description provided for @languageCode.
   ///
-  /// In en, this message translates to:
-  /// **'en'**
+  /// In ru, this message translates to:
+  /// **'ru'**
   String get languageCode;
 
   /// No description provided for @language.
   ///
-  /// In en, this message translates to:
-  /// **'English'**
+  /// In ru, this message translates to:
+  /// **'Русский'**
   String get language;
+
+  /// No description provided for @loginTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Войти в систему'**
+  String get loginTitle;
+
+  /// No description provided for @forgotPassword.
+  ///
+  /// In ru, this message translates to:
+  /// **'Забыли пароль?'**
+  String get forgotPassword;
+
+  /// No description provided for @phoneNumber.
+  ///
+  /// In ru, this message translates to:
+  /// **'Номер телефона'**
+  String get phoneNumber;
+
+  /// No description provided for @enterPhoneNumber.
+  ///
+  /// In ru, this message translates to:
+  /// **'Введите номер телефона'**
+  String get enterPhoneNumber;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -135,7 +159,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'ru'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ru', 'uz'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -146,8 +170,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en': return AppLocalizationsEn();
     case 'ru': return AppLocalizationsRu();
+    case 'uz': return AppLocalizationsUz();
   }
 
   throw FlutterError(

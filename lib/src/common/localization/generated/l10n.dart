@@ -81,6 +81,46 @@ class GeneratedLocalization {
   String get language {
     return Intl.message('Русский', name: 'language', desc: '', args: []);
   }
+
+  /// `Войти в систему`
+  String get loginTitle {
+    return Intl.message(
+      'Войти в систему',
+      name: 'loginTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Забыли пароль?`
+  String get forgotPassword {
+    return Intl.message(
+      'Забыли пароль?',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Номер телефона`
+  String get phoneNumber {
+    return Intl.message(
+      'Номер телефона',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Введите номер телефона`
+  String get enterPhoneNumber {
+    return Intl.message(
+      'Введите номер телефона',
+      name: 'enterPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate
@@ -90,7 +130,7 @@ class AppLocalizationDelegate
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'ru'),
-      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'uz'),
     ];
   }
 

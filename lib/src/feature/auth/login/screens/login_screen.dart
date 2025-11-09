@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
-import 'package:vakilium/src/common/widgets/app_logo.dart';
+import 'package:vakilium/src/common/widgets/app_text_field.dart';
 import 'package:vakilium/src/feature/auth/widgets/auth_top_widget.dart';
-import 'package:vakilium/src/feature/auth/widgets/language_selector.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -23,7 +22,29 @@ class _LoginScreenState extends State<LoginScreen> {
             alignment: Alignment.bottomCenter,
             child: DecoratedBox(
               decoration: BoxDecoration(borderRadius: Dimension.rTop20, color: context.color.white),
-              child: SizedBox.fromSize(size: Size.fromHeight(constraints.maxHeight * 0.8)),
+              child: SizedBox.fromSize(
+                size: Size.fromHeight(constraints.maxHeight * 0.8),
+                child: Padding(
+                  padding: Dimension.pV16H20,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(context.l10n.loginTitle, style: context.textTheme.interW600s24),
+                      Dimension.hBox24,
+                      const AppTextField(),
+                      Dimension.hBox16,
+                      const AppTextField(),
+                      Dimension.hBox8,
+                      GestureDetector(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [Text(context.l10n.forgotPassword, style: context.textTheme.interW400s14)],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ),
         ],

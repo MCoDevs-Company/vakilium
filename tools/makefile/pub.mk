@@ -88,7 +88,7 @@ fluttergen: ## Generate assets with flutter_gen
 l10n: ## Generate localization files
 	@dart pub global activate intl_utils
 	@(dart pub global run intl_utils:generate)
-	@(flutter gen-l10n --arb-dir lib/src/common/localization --output-dir lib/src/common/localization/generated --template-arb-file intl_en.arb)
+	@(flutter gen-l10n --arb-dir lib/src/common/localization --output-dir lib/src/common/localization/generated --template-arb-file intl_ru.arb)
 
 .PHONY: build_runner
 build_runner: ## Run build_runner to generate code

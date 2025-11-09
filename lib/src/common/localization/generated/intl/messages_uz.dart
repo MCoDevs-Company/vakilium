@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a uz locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,14 +18,22 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'uz';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "language": MessageLookupByLibrary.simpleMessage("English"),
-    "languageCode": MessageLookupByLibrary.simpleMessage("en"),
-    "localeCode": MessageLookupByLibrary.simpleMessage("en"),
-    "localeName": MessageLookupByLibrary.simpleMessage("en_US"),
+    "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Telefon raqamni kiriting",
+    ),
+    "forgotPassword": MessageLookupByLibrary.simpleMessage(
+      "Parolni unutdingiz?",
+    ),
+    "language": MessageLookupByLibrary.simpleMessage("O\'zbek"),
+    "languageCode": MessageLookupByLibrary.simpleMessage("uz"),
+    "localeCode": MessageLookupByLibrary.simpleMessage("uz"),
+    "localeName": MessageLookupByLibrary.simpleMessage("uz_UZ"),
     "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
+    "loginTitle": MessageLookupByLibrary.simpleMessage("Tizimga kirish"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqam"),
   };
 }

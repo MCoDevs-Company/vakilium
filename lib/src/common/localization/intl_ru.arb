@@ -4,5 +4,9 @@
   "localeCode": "ru",
   "localeScriptCode": "",
   "languageCode": "ru",
-  "language": "Русский"
+  "language": "Русский",
+  "loginTitle": "Войти в систему",
+  "forgotPassword": "Забыли пароль?",
+  "phoneNumber": "Номер телефона",
+  "enterPhoneNumber": "Введите номер телефона"
 }

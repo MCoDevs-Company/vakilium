@@ -22,4 +22,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get language => 'Русский';
+
+  @override
+  String get loginTitle => 'Войти в систему';
+
+  @override
+  String get forgotPassword => 'Забыли пароль?';
+
+  @override
+  String get phoneNumber => 'Номер телефона';
+
+  @override
+  String get enterPhoneNumber => 'Введите номер телефона';
 }
