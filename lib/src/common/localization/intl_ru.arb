@@ -8,5 +8,7 @@
   "loginTitle": "Войти в систему",
   "forgotPassword": "Забыли пароль?",
   "phoneNumber": "Номер телефона",
-  "enterPhoneNumber": "Введите номер телефона"
+  "enterPhoneNumber": "Введите номер телефона",
+  "registerTitle": "Регистрация",
+  "registerAgreement": "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения"
 }

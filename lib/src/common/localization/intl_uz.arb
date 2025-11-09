@@ -8,5 +8,7 @@
   "loginTitle": "Tizimga kirish",
   "forgotPassword": "Parolni unutdingiz?",
   "phoneNumber": "Telefon raqam",
-  "enterPhoneNumber": "Telefon raqamni kiriting"
+  "enterPhoneNumber": "Telefon raqamni kiriting",
+  "registerTitle": "Ro'yxatdan o'tish",
+  "registerAgreement": "Ro'yxatdan o'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz"
 }

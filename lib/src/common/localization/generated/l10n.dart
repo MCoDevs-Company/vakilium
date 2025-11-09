@@ -121,6 +121,26 @@ class GeneratedLocalization {
       args: [],
     );
   }
+
+  /// `Регистрация`
+  String get registerTitle {
+    return Intl.message(
+      'Регистрация',
+      name: 'registerTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения`
+  String get registerAgreement {
+    return Intl.message(
+      'Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения',
+      name: 'registerAgreement',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate

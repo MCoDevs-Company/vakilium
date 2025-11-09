@@ -35,5 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
     "loginTitle": MessageLookupByLibrary.simpleMessage("Tizimga kirish"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqam"),
+    "registerAgreement": MessageLookupByLibrary.simpleMessage(
+      "Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz",
+    ),
+    "registerTitle": MessageLookupByLibrary.simpleMessage(
+      "Ro\'yxatdan o\'tish",
+    ),
   };
 }

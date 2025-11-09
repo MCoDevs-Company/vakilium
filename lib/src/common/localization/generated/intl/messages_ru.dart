@@ -33,5 +33,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
     "loginTitle": MessageLookupByLibrary.simpleMessage("Войти в систему"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Номер телефона"),
+    "registerAgreement": MessageLookupByLibrary.simpleMessage(
+      "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения",
+    ),
+    "registerTitle": MessageLookupByLibrary.simpleMessage("Регистрация"),
   };
 }
