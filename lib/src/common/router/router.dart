@@ -19,7 +19,12 @@ sealed class Routes {
       GoRoute(path: splash, name: splash, builder: (context, state) => const SplashScreen()),
       StatefulShellRoute.indexedStack(
         parentNavigatorKey: _rootNavigatorKey,
-        builder: (context, state, navigationShell) => AuthShell(child: navigationShell),
+        pageBuilder: (context, state, navigationShell) => CustomTransitionPage(
+          child: AuthShell(child: navigationShell),
+          transitionDuration: Durations.extralong2,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(opacity: animation, child: child),
+        ),
         branches: [
           StatefulShellBranch(
             navigatorKey: _loginNavigatorKey,

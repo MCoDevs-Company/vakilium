@@ -82,14 +82,9 @@ class GeneratedLocalization {
     return Intl.message('Русский', name: 'language', desc: '', args: []);
   }
 
-  /// `Войти в систему`
+  /// `Войти`
   String get loginTitle {
-    return Intl.message(
-      'Войти в систему',
-      name: 'loginTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Войти', name: 'loginTitle', desc: '', args: []);
   }
 
   /// `Забыли пароль?`

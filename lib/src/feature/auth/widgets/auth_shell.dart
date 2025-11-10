@@ -21,6 +21,7 @@ class AuthShell extends StatelessWidget {
           children: [
             AuthTopWidget(maxHeight: constraints.maxHeight),
             SafeArea(
+              bottom: false,
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: DecoratedBox(

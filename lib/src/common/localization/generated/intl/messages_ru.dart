@@ -32,7 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "localeCode": MessageLookupByLibrary.simpleMessage("ru"),
     "localeName": MessageLookupByLibrary.simpleMessage("ru_RU"),
     "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
-    "loginTitle": MessageLookupByLibrary.simpleMessage("Войти в систему"),
+    "loginTitle": MessageLookupByLibrary.simpleMessage("Войти"),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Номер телефона"),
     "registerAgreement": MessageLookupByLibrary.simpleMessage(

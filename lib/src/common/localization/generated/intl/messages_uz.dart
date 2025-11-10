@@ -34,7 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "localeCode": MessageLookupByLibrary.simpleMessage("uz"),
     "localeName": MessageLookupByLibrary.simpleMessage("uz_UZ"),
     "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
-    "loginTitle": MessageLookupByLibrary.simpleMessage("Tizimga kirish"),
+    "loginTitle": MessageLookupByLibrary.simpleMessage("Kirish"),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqam"),
     "registerAgreement": MessageLookupByLibrary.simpleMessage(

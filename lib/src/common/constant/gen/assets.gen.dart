@@ -20,8 +20,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/logo.svg
   SvgGenImage get logo => const SvgGenImage('assets/icons/logo.svg');
 
+  /// File path: assets/icons/visibility_off.svg
+  SvgGenImage get visibilityOff => const SvgGenImage('assets/icons/visibility_off.svg');
+
+  /// File path: assets/icons/visibility_on.svg
+  SvgGenImage get visibilityOn => const SvgGenImage('assets/icons/visibility_on.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [logo];
+  List<SvgGenImage> get values => [logo, visibilityOff, visibilityOn];
 }
 
 class $AssetsImagesGen {

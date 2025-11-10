@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:vakilium/src/common/constant/gen/assets.gen.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
 
@@ -76,8 +77,10 @@ class _AppTextFieldState extends State<AppTextField> {
               true => IconButton(
                 icon: ValueListenableBuilder(
                   valueListenable: _obscureText,
-                  builder: (context, isObscure, child) =>
-                      Icon(isObscure ? Icons.visibility : Icons.visibility_off, color: context.color.hintText),
+                  builder: (context, isObscure, child) => switch (isObscure) {
+                    true => Assets.icons.visibilityOn,
+                    false => Assets.icons.visibilityOff,
+                  }.svg(),
                 ),
                 onPressed: () => _obscureText.value = !_obscureText.value,
               ),
