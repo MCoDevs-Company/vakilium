@@ -35,6 +35,7 @@ class _LoginScreenState extends LoginController {
           label: context.l10n.password,
           controller: passwordController,
           hintText: context.l10n.enterPassword,
+          isPasswordField: true,
         ),
         Dimension.hBox8,
         GestureDetector(

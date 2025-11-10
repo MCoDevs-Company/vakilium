@@ -6,7 +6,7 @@ import 'package:vakilium/src/common/util/dimension.dart';
 class AppTextField extends StatefulWidget {
   const AppTextField({
     super.key,
-    this.obscureText = false,
+    this.isPasswordField = false,
     this.controller,
     this.label,
     this.hintText,
@@ -19,7 +19,7 @@ class AppTextField extends StatefulWidget {
   final TextEditingController? controller;
   final TextInputFormatter? inputFormatter;
   final TextInputType? keyboardType;
-  final bool obscureText;
+  final bool isPasswordField;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -30,7 +30,7 @@ class _AppTextFieldState extends State<AppTextField> {
 
   @override
   void initState() {
-    _obscureText = ValueNotifier<bool>(widget.obscureText);
+    _obscureText = ValueNotifier<bool>(widget.isPasswordField);
     super.initState();
   }
 
@@ -72,7 +72,17 @@ class _AppTextFieldState extends State<AppTextField> {
             hintText: widget.hintText,
             hintStyle: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
 
-            suffixIcon: const FlutterLogo(),
+            suffixIcon: switch (widget.isPasswordField) {
+              true => IconButton(
+                icon: ValueListenableBuilder(
+                  valueListenable: _obscureText,
+                  builder: (context, isObscure, child) =>
+                      Icon(isObscure ? Icons.visibility : Icons.visibility_off, color: context.color.hintText),
+                ),
+                onPressed: () => _obscureText.value = !_obscureText.value,
+              ),
+              false => null,
+            },
 
             // Borders
             border: _getBorder(),
