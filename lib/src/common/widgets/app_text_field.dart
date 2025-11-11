@@ -15,6 +15,9 @@ class AppTextField extends StatefulWidget {
     this.keyboardType,
     this.textInputAction,
     this.prefixIcon,
+    this.validator,
+    this.autofocus = false,
+    this.focusNode,
   });
 
   final String? label;
@@ -25,6 +28,9 @@ class AppTextField extends StatefulWidget {
   final bool isPasswordField;
   final TextInputAction? textInputAction;
   final Widget? prefixIcon;
+  final FormFieldValidator<String>? validator;
+  final bool autofocus;
+  final FocusNode? focusNode;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -56,6 +62,9 @@ class _AppTextFieldState extends State<AppTextField> {
       ValueListenableBuilder(
         valueListenable: _obscureText,
         builder: (context, isObscure, child) => TextFormField(
+          autofocus: widget.autofocus,
+          focusNode: widget.focusNode,
+          validator: widget.validator,
           obscureText: isObscure,
           controller: widget.controller,
           style: context.textTheme.interW400s14,

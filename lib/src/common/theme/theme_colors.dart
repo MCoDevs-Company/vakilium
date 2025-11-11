@@ -13,6 +13,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     required this.textFieldBackground,
     required this.hintText,
     required this.gray900,
+    required this.gray400,
   });
 
   final Color white;
@@ -25,6 +26,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
   final Color textFieldBackground;
   final Color hintText;
   final Color gray900;
+  final Color gray400;
 
   static const ThemeColors light = ThemeColors(
     white: Colors.white,
@@ -37,6 +39,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     textFieldBackground: Color(0xFFF2F4F7),
     hintText: Color(0xFF98A2B3),
     gray900: Color(0xFF101828),
+    gray400: Color(0xFF98A2B3),
   );
 
   static const ThemeColors dark = ThemeColors(
@@ -50,6 +53,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     textFieldBackground: Color(0xFFF2F4F7),
     hintText: Color(0xFF98A2B3),
     gray900: Color(0xFF101828),
+    gray400: Color(0xFF98A2B3),
   );
 
   @override
@@ -64,6 +68,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     Color? textFieldBackground,
     Color? hintText,
     Color? gray900,
+    Color? gray400,
   }) => ThemeColors(
     white: white ?? this.white,
     black: black ?? this.black,
@@ -75,6 +80,7 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
     textFieldBackground: textFieldBackground ?? this.textFieldBackground,
     hintText: hintText ?? this.hintText,
     gray900: gray900 ?? this.gray900,
+    gray400: gray400 ?? this.gray400,
   );
 
   @override
@@ -91,5 +97,6 @@ final class ThemeColors extends ThemeExtension<ThemeColors> {
           textFieldBackground: Color.lerp(textFieldBackground, other.textFieldBackground, t)!,
           hintText: Color.lerp(hintText, other.hintText, t)!,
           gray900: Color.lerp(gray900, other.gray900, t)!,
+          gray400: Color.lerp(gray400, other.gray400, t)!,
         );
 }

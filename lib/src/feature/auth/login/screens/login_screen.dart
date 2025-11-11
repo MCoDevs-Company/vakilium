@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:vakilium/src/common/constant/gen/assets.gen.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
-import 'package:vakilium/src/common/router/router.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
 import 'package:vakilium/src/common/widgets/app_button.dart';
 import 'package:vakilium/src/common/widgets/app_text_field.dart';
@@ -72,11 +70,7 @@ class _LoginScreenState extends LoginController {
               ),
               AppButton(onPressed: () {}, title: context.l10n.loginTitle),
               Dimension.hBox8,
-              AppButton(
-                onPressed: () => context.goNamed(Routes.register),
-                title: context.l10n.registerTitle,
-                isPrimary: false,
-              ),
+              AppButton(onPressed: onRegisterPressed, title: context.l10n.registerTitle, isPrimary: false),
             ],
           ),
         ),

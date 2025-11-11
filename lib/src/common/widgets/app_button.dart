@@ -25,6 +25,7 @@ class _AppButtonState extends State<AppButton> {
             true => context.color.black,
             false => context.color.textFieldBackground,
           },
+      disabledBackgroundColor: context.color.textFieldBackground,
       shape: const RoundedRectangleBorder(borderRadius: Dimension.rAll12),
       minimumSize: const Size.fromHeight(44),
       padding: Dimension.pV10H12,
@@ -34,6 +35,7 @@ class _AppButtonState extends State<AppButton> {
       widget.title ?? '',
       style: context.textTheme.interW600s14.copyWith(
         color: switch (widget.isPrimary) {
+          _ when widget.onPressed == null => context.color.gray400,
           true => context.color.white,
           false => null,
         },
