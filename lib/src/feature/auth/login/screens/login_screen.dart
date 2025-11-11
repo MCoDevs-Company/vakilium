@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+import 'package:vakilium/src/common/constant/gen/assets.gen.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/router/router.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
@@ -34,11 +35,16 @@ class _LoginScreenState extends LoginController {
                       Text(context.l10n.loginTitle, style: context.textTheme.interW600s24),
                       Dimension.hBox24,
                       AppTextField(
+                        prefixIcon: Padding(
+                          padding: Dimension.pH10,
+                          child: Assets.icons.globus.svg(height: 24, width: 24),
+                        ),
                         label: context.l10n.phoneNumber,
                         controller: phoneNumberController,
                         hintText: "+998 __ ___-__-__",
                         inputFormatter: MaskTextInputFormatter(mask: '+998 ## ###-##-##'),
                         keyboardType: TextInputType.phone,
+                        textInputAction: TextInputAction.next,
                       ),
                       Dimension.hBox16,
                       AppTextField(

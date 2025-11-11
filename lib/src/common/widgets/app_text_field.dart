@@ -13,6 +13,8 @@ class AppTextField extends StatefulWidget {
     this.hintText,
     this.inputFormatter,
     this.keyboardType,
+    this.textInputAction,
+    this.prefixIcon,
   });
 
   final String? label;
@@ -21,6 +23,8 @@ class AppTextField extends StatefulWidget {
   final TextInputFormatter? inputFormatter;
   final TextInputType? keyboardType;
   final bool isPasswordField;
+  final TextInputAction? textInputAction;
+  final Widget? prefixIcon;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -60,6 +64,7 @@ class _AppTextFieldState extends State<AppTextField> {
             _ => null,
           },
           keyboardType: widget.keyboardType,
+          textInputAction: widget.textInputAction,
           decoration: InputDecoration(
             // Padding
             isDense: true,
@@ -86,6 +91,8 @@ class _AppTextFieldState extends State<AppTextField> {
               ),
               false => null,
             },
+
+            prefixIcon: widget.prefixIcon,
 
             // Borders
             border: _getBorder(),

@@ -17,6 +17,9 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/globus.svg
+  SvgGenImage get globus => const SvgGenImage('assets/icons/globus.svg');
+
   /// File path: assets/icons/logo.svg
   SvgGenImage get logo => const SvgGenImage('assets/icons/logo.svg');
 
@@ -27,7 +30,7 @@ class $AssetsIconsGen {
   SvgGenImage get visibilityOn => const SvgGenImage('assets/icons/visibility_on.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [logo, visibilityOff, visibilityOn];
+  List<SvgGenImage> get values => [globus, logo, visibilityOff, visibilityOn];
 }
 
 class $AssetsImagesGen {
