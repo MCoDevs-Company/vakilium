@@ -13,5 +13,19 @@
   "registerAgreement": "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения",
   "password": "Пароль",
   "enterPassword": "Введите пароль",
-  "weSendOtpTo": "Мы отпавили код подтверждения на номер"
+  "weSendOtpTo": "Мы отпавили код подтверждения на номер",
+  "resendOtp": "Отправить занова",
+  "passportSeriesOrPinfl": "Серия и номер паспорта или ПИНФЛ",
+  "passportFieldHint": "AA1234567 | ПИНФЛ",
+  "minimumCharacters": "Минимум {count} символов",
+  "@minimumCharacters": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "birthDate": "Дата рождения",
+  "birthDateHint": "ДД.ММ.ГГГГ",
+  "confirm": "Подтвердить"
 }

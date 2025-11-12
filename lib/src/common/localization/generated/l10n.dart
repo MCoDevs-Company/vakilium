@@ -161,6 +161,66 @@ class GeneratedLocalization {
       args: [],
     );
   }
+
+  /// `Отправить занова`
+  String get resendOtp {
+    return Intl.message(
+      'Отправить занова',
+      name: 'resendOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Серия и номер паспорта или ПИНФЛ`
+  String get passportSeriesOrPinfl {
+    return Intl.message(
+      'Серия и номер паспорта или ПИНФЛ',
+      name: 'passportSeriesOrPinfl',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `AA1234567 | ПИНФЛ`
+  String get passportFieldHint {
+    return Intl.message(
+      'AA1234567 | ПИНФЛ',
+      name: 'passportFieldHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Минимум {count} символов`
+  String minimumCharacters(int count) {
+    return Intl.message(
+      'Минимум $count символов',
+      name: 'minimumCharacters',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Дата рождения`
+  String get birthDate {
+    return Intl.message('Дата рождения', name: 'birthDate', desc: '', args: []);
+  }
+
+  /// `ДД.ММ.ГГГГ`
+  String get birthDateHint {
+    return Intl.message(
+      'ДД.ММ.ГГГГ',
+      name: 'birthDateHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Подтвердить`
+  String get confirm {
+    return Intl.message('Подтвердить', name: 'confirm', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate

@@ -20,8 +20,13 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'uz';
 
+  static String m0(count) => "Kamida ${count} ta belgi";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "birthDate": MessageLookupByLibrary.simpleMessage("Tug\'ilgan sana"),
+    "birthDateHint": MessageLookupByLibrary.simpleMessage("KK.OO.YYYY"),
+    "confirm": MessageLookupByLibrary.simpleMessage("Tasdiqlash"),
     "enterPassword": MessageLookupByLibrary.simpleMessage("Введите пароль"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Telefon raqamni kiriting",
@@ -35,6 +40,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "localeName": MessageLookupByLibrary.simpleMessage("uz_UZ"),
     "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
     "loginTitle": MessageLookupByLibrary.simpleMessage("Kirish"),
+    "minimumCharacters": m0,
+    "passportFieldHint": MessageLookupByLibrary.simpleMessage(
+      "AA1234567 | PINFL",
+    ),
+    "passportSeriesOrPinfl": MessageLookupByLibrary.simpleMessage(
+      "Passport seriyasi va raqami yoki PINFL",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqam"),
     "registerAgreement": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "registerTitle": MessageLookupByLibrary.simpleMessage(
       "Ro\'yxatdan o\'tish",
     ),
+    "resendOtp": MessageLookupByLibrary.simpleMessage("Отправить занова"),
     "weSendOtpTo": MessageLookupByLibrary.simpleMessage(
       "Мы отпавили код подтверждения на номер",
     ),

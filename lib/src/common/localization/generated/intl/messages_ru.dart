@@ -20,8 +20,13 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
+  static String m0(count) => "Минимум ${count} символов";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "birthDate": MessageLookupByLibrary.simpleMessage("Дата рождения"),
+    "birthDateHint": MessageLookupByLibrary.simpleMessage("ДД.ММ.ГГГГ"),
+    "confirm": MessageLookupByLibrary.simpleMessage("Подтвердить"),
     "enterPassword": MessageLookupByLibrary.simpleMessage("Введите пароль"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Введите номер телефона",
@@ -33,12 +38,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "localeName": MessageLookupByLibrary.simpleMessage("ru_RU"),
     "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
     "loginTitle": MessageLookupByLibrary.simpleMessage("Войти"),
+    "minimumCharacters": m0,
+    "passportFieldHint": MessageLookupByLibrary.simpleMessage(
+      "AA1234567 | ПИНФЛ",
+    ),
+    "passportSeriesOrPinfl": MessageLookupByLibrary.simpleMessage(
+      "Серия и номер паспорта или ПИНФЛ",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Номер телефона"),
     "registerAgreement": MessageLookupByLibrary.simpleMessage(
       "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения",
     ),
     "registerTitle": MessageLookupByLibrary.simpleMessage("Регистрация"),
+    "resendOtp": MessageLookupByLibrary.simpleMessage("Отправить занова"),
     "weSendOtpTo": MessageLookupByLibrary.simpleMessage(
       "Мы отпавили код подтверждения на номер",
     ),

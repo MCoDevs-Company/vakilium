@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:vakilium/src/feature/auth/login/screens/login_screen.dart';
 import 'package:vakilium/src/feature/auth/otp/screens/otp_screen.dart';
 import 'package:vakilium/src/feature/auth/register/screens/register_screen.dart';
+import 'package:vakilium/src/feature/auth/user_info/screens/user_info_screen.dart';
 import 'package:vakilium/src/feature/auth/widgets/auth_shell.dart';
 import 'package:vakilium/src/feature/splash/screens/splash_screen.dart';
 
@@ -38,6 +39,9 @@ sealed class Routes {
               ),
             ],
           ),
+          StatefulShellBranch(
+            routes: [GoRoute(path: userInfo, name: userInfo, builder: (context, state) => const UserInfoScreen())],
+          ),
         ],
       ),
     ],
@@ -47,4 +51,5 @@ sealed class Routes {
   static const String login = '/login';
   static const String register = '/register';
   static const String otp = '/otp';
+  static const String userInfo = '/user-info';
 }

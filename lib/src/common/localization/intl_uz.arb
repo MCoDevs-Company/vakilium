@@ -13,5 +13,20 @@
   "registerAgreement": "Ro'yxatdan o'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz",
   "password": "Пароль",
   "enterPassword": "Введите пароль",
-  "weSendOtpTo": "Мы отпавили код подтверждения на номер"
+  "weSendOtpTo": "Мы отпавили код подтверждения на номер",
+  "resendOtp": "Отправить занова",
+  "dontReceiveOtp": "Не получили код?",
+  "passportSeriesOrPinfl": "Passport seriyasi va raqami yoki PINFL",
+  "passportFieldHint": "AA1234567 | PINFL",
+  "minimumCharacters": "Kamida {count} ta belgi",
+  "@minimumCharacters": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "birthDate": "Tug'ilgan sana",
+  "birthDateHint": "KK.OO.YYYY",
+  "confirm": "Tasdiqlash"
 }

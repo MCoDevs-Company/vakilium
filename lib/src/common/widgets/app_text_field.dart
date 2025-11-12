@@ -15,9 +15,13 @@ class AppTextField extends StatefulWidget {
     this.keyboardType,
     this.textInputAction,
     this.prefixIcon,
+    this.suffixIcon,
     this.validator,
     this.autofocus = false,
     this.focusNode,
+    this.onTap,
+    this.readOnly = false,
+    this.textCapitalization = TextCapitalization.none,
   });
 
   final String? label;
@@ -28,9 +32,13 @@ class AppTextField extends StatefulWidget {
   final bool isPasswordField;
   final TextInputAction? textInputAction;
   final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final FormFieldValidator<String>? validator;
   final bool autofocus;
   final FocusNode? focusNode;
+  final VoidCallback? onTap;
+  final bool readOnly;
+  final TextCapitalization textCapitalization;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -68,6 +76,9 @@ class _AppTextFieldState extends State<AppTextField> {
           obscureText: isObscure,
           controller: widget.controller,
           style: context.textTheme.interW400s14,
+          readOnly: widget.readOnly,
+          onTap: widget.onTap,
+          textCapitalization: widget.textCapitalization,
           inputFormatters: switch (widget.inputFormatter) {
             TextInputFormatter inputFormatter => [inputFormatter],
             _ => null,
@@ -98,7 +109,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 ),
                 onPressed: () => _obscureText.value = !_obscureText.value,
               ),
-              false => null,
+              false => widget.suffixIcon,
             },
 
             prefixIcon: widget.prefixIcon,
