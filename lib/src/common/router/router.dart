@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vakilium/src/feature/auth/login/screens/login_screen.dart';
+import 'package:vakilium/src/feature/auth/new_password/screens/new_password_screen.dart';
 import 'package:vakilium/src/feature/auth/otp/screens/otp_screen.dart';
 import 'package:vakilium/src/feature/auth/register/screens/register_screen.dart';
 import 'package:vakilium/src/feature/auth/user_info/screens/user_info_screen.dart';
@@ -42,6 +43,11 @@ sealed class Routes {
           StatefulShellBranch(
             routes: [GoRoute(path: userInfo, name: userInfo, builder: (context, state) => const UserInfoScreen())],
           ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(path: newPassword, name: newPassword, builder: (context, state) => const NewPasswordScreen()),
+            ],
+          ),
         ],
       ),
     ],
@@ -52,4 +58,5 @@ sealed class Routes {
   static const String register = '/register';
   static const String otp = '/otp';
   static const String userInfo = '/user-info';
+  static const String newPassword = '/new-password';
 }

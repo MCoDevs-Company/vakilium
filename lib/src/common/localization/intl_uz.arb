@@ -11,10 +11,11 @@
   "enterPhoneNumber": "Telefon raqamni kiriting",
   "registerTitle": "Ro'yxatdan o'tish",
   "registerAgreement": "Ro'yxatdan o'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz",
-  "password": "Пароль",
-  "enterPassword": "Введите пароль",
-  "weSendOtpTo": "Мы отпавили код подтверждения на номер",
-  "resendOtp": "Отправить занова",
+  "password": "Parol",
+  "enterPassword": "Parolni kiriting",
+  "confirmPassword": "Parolni tasdiqlang",
+  "weSendOtpTo": "Tasdiqlash kodi ushbu raqamga yuborildi",
+  "resendOtp": "Qayta yuborish",
   "dontReceiveOtp": "Не получили код?",
   "passportSeriesOrPinfl": "Passport seriyasi va raqami yoki PINFL",
   "passportFieldHint": "AA1234567 | PINFL",
@@ -28,5 +29,15 @@
   },
   "birthDate": "Tug'ilgan sana",
   "birthDateHint": "KK.OO.YYYY",
-  "confirm": "Tasdiqlash"
+  "confirm": "Tasdiqlash",
+  "setPasswordTitle": "Parolni o'rnatish",
+  "passwordsDoNotMatch": "Parollar mos emas",
+  "passwordTooShort": "Parol kamida {count} ta belgidan iborat bo'lishi kerak",
+  "@passwordTooShort": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

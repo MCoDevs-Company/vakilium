@@ -3,16 +3,16 @@ import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
 import 'package:vakilium/src/common/widgets/app_button.dart';
 import 'package:vakilium/src/common/widgets/app_text_field.dart';
-import 'package:vakilium/src/feature/auth/user_info/controller/user_info_controller.dart';
+import 'package:vakilium/src/feature/auth/new_password/controller/new_password_controller.dart';
 
-class UserInfoScreen extends StatefulWidget {
-  const UserInfoScreen({super.key});
+class NewPasswordScreen extends StatefulWidget {
+  const NewPasswordScreen({super.key});
 
   @override
-  State<UserInfoScreen> createState() => _UserInfoScreenState();
+  State<NewPasswordScreen> createState() => _NewPasswordScreenState();
 }
 
-class _UserInfoScreenState extends UserInfoController {
+class _NewPasswordScreenState extends NewPasswordController {
   @override
   Widget build(BuildContext context) => ColoredBox(
     color: context.color.white,
@@ -31,37 +31,36 @@ class _UserInfoScreenState extends UserInfoController {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(context.l10n.registerTitle, style: context.textTheme.interW600s24),
+                        Text(context.l10n.setPasswordTitle, style: context.textTheme.interW600s24),
                         Dimension.hBox24,
                         Form(
                           key: formKey,
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               AppTextField(
                                 autofocus: true,
-                                label: context.l10n.passportSeriesOrPinfl,
-                                hintText: context.l10n.passportFieldHint,
-                                controller: documentController,
+                                label: context.l10n.password,
+                                hintText: context.l10n.enterPassword,
+                                controller: passwordController,
                                 textInputAction: TextInputAction.next,
-                                inputFormatter: passportFormatter,
-                                textCapitalization: TextCapitalization.characters,
+                                isPasswordField: true,
+                                validator: validatePassword,
                               ),
                               Dimension.hBox8,
                               Text(
-                                context.l10n.minimumCharacters(UserInfoController.minDocumentLength),
+                                context.l10n.minimumCharacters(NewPasswordController.minPasswordLength),
                                 style: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
                               ),
                               Dimension.hBox16,
                               AppTextField(
-                                label: context.l10n.birthDate,
-                                hintText: context.l10n.birthDateHint,
-                                controller: birthDateController,
-                                keyboardType: TextInputType.datetime,
+                                label: context.l10n.confirmPassword,
+                                hintText: context.l10n.enterPassword,
+                                controller: confirmPasswordController,
                                 textInputAction: TextInputAction.done,
-                                inputFormatter: birthDateMask,
-                                readOnly: true,
-                                onTap: onBirthDateTap,
+                                isPasswordField: true,
+                                validator: validateConfirmPassword,
                               ),
                             ],
                           ),

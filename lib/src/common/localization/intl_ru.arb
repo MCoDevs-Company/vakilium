@@ -13,6 +13,7 @@
   "registerAgreement": "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения",
   "password": "Пароль",
   "enterPassword": "Введите пароль",
+  "confirmPassword": "Подтвердите пароль",
   "weSendOtpTo": "Мы отпавили код подтверждения на номер",
   "resendOtp": "Отправить занова",
   "passportSeriesOrPinfl": "Серия и номер паспорта или ПИНФЛ",
@@ -27,5 +28,15 @@
   },
   "birthDate": "Дата рождения",
   "birthDateHint": "ДД.ММ.ГГГГ",
-  "confirm": "Подтвердить"
+  "confirm": "Подтвердить",
+  "setPasswordTitle": "Установка пароля",
+  "passwordsDoNotMatch": "Пароли не совпадают",
+  "passwordTooShort": "Пароль должен содержать минимум {count} символов",
+  "@passwordTooShort": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

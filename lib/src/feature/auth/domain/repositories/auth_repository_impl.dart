@@ -1,4 +1,4 @@
-import 'package:vakilium/src/feature/auth/repositories/auth_repository.dart';
+import 'package:vakilium/src/feature/auth/domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   @override
