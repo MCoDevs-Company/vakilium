@@ -28,7 +28,7 @@ abstract class NewPasswordController extends State<NewPasswordScreen> {
   void _onFormChanged() {
     final password = passwordController.text.trim();
     final confirm = confirmPasswordController.text.trim();
-    final isValid = password.length >= minPasswordLength && password == confirm;
+    final isValid = password.length >= minPasswordLength && confirm.isNotEmpty;
     if (isSubmitEnabled.value != isValid) {
       isSubmitEnabled.value = isValid;
     }

@@ -35,7 +35,6 @@ class _NewPasswordScreenState extends NewPasswordController {
                         Dimension.hBox24,
                         Form(
                           key: formKey,
-                          autovalidateMode: AutovalidateMode.onUserInteraction,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
