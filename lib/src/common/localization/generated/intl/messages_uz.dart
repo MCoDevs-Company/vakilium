@@ -43,5 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "registerTitle": MessageLookupByLibrary.simpleMessage(
       "Ro\'yxatdan o\'tish",
     ),
+    "weSendOtpTo": MessageLookupByLibrary.simpleMessage(
+      "Мы отпавили код подтверждения на номер",
+    ),
   };
 }

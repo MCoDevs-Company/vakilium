@@ -24,7 +24,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get language => 'O\'zbek';
 
   @override
-  String get loginTitle => 'Tizimga kirish';
+  String get loginTitle => 'Kirish';
 
   @override
   String get forgotPassword => 'Parolni unutdingiz?';
@@ -41,4 +41,10 @@ class AppLocalizationsUz extends AppLocalizations {
   @override
   String get registerAgreement =>
       'Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz';
+
+  @override
+  String get password => 'Пароль';
+
+  @override
+  String get enterPassword => 'Введите пароль';
 }

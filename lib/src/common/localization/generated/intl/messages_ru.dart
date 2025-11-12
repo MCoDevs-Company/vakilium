@@ -39,5 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения",
     ),
     "registerTitle": MessageLookupByLibrary.simpleMessage("Регистрация"),
+    "weSendOtpTo": MessageLookupByLibrary.simpleMessage(
+      "Мы отпавили код подтверждения на номер",
+    ),
   };
 }

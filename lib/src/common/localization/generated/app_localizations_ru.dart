@@ -24,7 +24,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get language => 'Русский';
 
   @override
-  String get loginTitle => 'Войти в систему';
+  String get loginTitle => 'Войти';
 
   @override
   String get forgotPassword => 'Забыли пароль?';
@@ -40,4 +40,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get registerAgreement => 'Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения';
+
+  @override
+  String get password => 'Пароль';
+
+  @override
+  String get enterPassword => 'Введите пароль';
 }

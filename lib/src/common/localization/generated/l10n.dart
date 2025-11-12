@@ -151,6 +151,16 @@ class GeneratedLocalization {
       args: [],
     );
   }
+
+  /// `Мы отпавили код подтверждения на номер`
+  String get weSendOtpTo {
+    return Intl.message(
+      'Мы отпавили код подтверждения на номер',
+      name: 'weSendOtpTo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate

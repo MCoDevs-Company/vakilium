@@ -12,5 +12,6 @@
   "registerTitle": "Ro'yxatdan o'tish",
   "registerAgreement": "Ro'yxatdan o'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz",
   "password": "Пароль",
-  "enterPassword": "Введите пароль"
+  "enterPassword": "Введите пароль",
+  "weSendOtpTo": "Мы отпавили код подтверждения на номер"
 }

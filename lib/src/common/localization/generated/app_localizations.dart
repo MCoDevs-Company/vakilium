@@ -125,7 +125,7 @@ abstract class AppLocalizations {
   /// No description provided for @loginTitle.
   ///
   /// In ru, this message translates to:
-  /// **'Войти в систему'**
+  /// **'Войти'**
   String get loginTitle;
 
   /// No description provided for @forgotPassword.
@@ -157,6 +157,18 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения'**
   String get registerAgreement;
+
+  /// No description provided for @password.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пароль'**
+  String get password;
+
+  /// No description provided for @enterPassword.
+  ///
+  /// In ru, this message translates to:
+  /// **'Введите пароль'**
+  String get enterPassword;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

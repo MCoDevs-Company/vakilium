@@ -71,7 +71,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         Text(context.l10n.registerTitle, style: context.textTheme.interW600s24),
                         Dimension.hBox8,
                         Text(
-                          'Мы отпавили код подтверждения на номер',
+                          context.l10n.weSendOtpTo,
                           style: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
                         ),
                         Dimension.hBox8,
