@@ -18,8 +18,10 @@ class GeneratedLocalization {
   static GeneratedLocalization? _current;
 
   static GeneratedLocalization get current {
-    assert(_current != null,
-        'No instance of GeneratedLocalization was loaded. Try to initialize the GeneratedLocalization delegate before accessing GeneratedLocalization.current.');
+    assert(
+      _current != null,
+      'No instance of GeneratedLocalization was loaded. Try to initialize the GeneratedLocalization delegate before accessing GeneratedLocalization.current.',
+    );
     return _current!;
   }
 
@@ -41,74 +43,48 @@ class GeneratedLocalization {
 
   static GeneratedLocalization of(BuildContext context) {
     final instance = GeneratedLocalization.maybeOf(context);
-    assert(instance != null,
-        'No instance of GeneratedLocalization present in the widget tree. Did you add GeneratedLocalization.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of GeneratedLocalization present in the widget tree. Did you add GeneratedLocalization.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
   static GeneratedLocalization? maybeOf(BuildContext context) {
     return Localizations.of<GeneratedLocalization>(
-        context, GeneratedLocalization);
+      context,
+      GeneratedLocalization,
+    );
   }
 
   /// `ru_RU`
   String get localeName {
-    return Intl.message(
-      'ru_RU',
-      name: 'localeName',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ru_RU', name: 'localeName', desc: '', args: []);
   }
 
   /// `ru`
   String get localeCode {
-    return Intl.message(
-      'ru',
-      name: 'localeCode',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ru', name: 'localeCode', desc: '', args: []);
   }
 
   /// ``
   String get localeScriptCode {
-    return Intl.message(
-      '',
-      name: 'localeScriptCode',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('', name: 'localeScriptCode', desc: '', args: []);
   }
 
   /// `ru`
   String get languageCode {
-    return Intl.message(
-      'ru',
-      name: 'languageCode',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ru', name: 'languageCode', desc: '', args: []);
   }
 
   /// `Русский`
   String get language {
-    return Intl.message(
-      'Русский',
-      name: 'language',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Русский', name: 'language', desc: '', args: []);
   }
 
   /// `Войти`
   String get loginTitle {
-    return Intl.message(
-      'Войти',
-      name: 'loginTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Войти', name: 'loginTitle', desc: '', args: []);
   }
 
   /// `Забыли пароль?`
@@ -163,12 +139,7 @@ class GeneratedLocalization {
 
   /// `Пароль`
   String get password {
-    return Intl.message(
-      'Пароль',
-      name: 'password',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Пароль', name: 'password', desc: '', args: []);
   }
 
   /// `Введите пароль`
@@ -243,12 +214,7 @@ class GeneratedLocalization {
 
   /// `Дата рождения`
   String get birthDate {
-    return Intl.message(
-      'Дата рождения',
-      name: 'birthDate',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Дата рождения', name: 'birthDate', desc: '', args: []);
   }
 
   /// `ДД.ММ.ГГГГ`
@@ -263,12 +229,7 @@ class GeneratedLocalization {
 
   /// `Подтвердить`
   String get confirm {
-    return Intl.message(
-      'Подтвердить',
-      name: 'confirm',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Подтвердить', name: 'confirm', desc: '', args: []);
   }
 
   /// `Установка пароля`

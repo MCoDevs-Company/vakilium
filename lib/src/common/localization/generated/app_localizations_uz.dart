@@ -39,12 +39,51 @@ class AppLocalizationsUz extends AppLocalizations {
   String get registerTitle => 'Ro\'yxatdan o\'tish';
 
   @override
-  String get registerAgreement =>
-      'Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz';
+  String get registerAgreement => 'Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz';
 
   @override
-  String get password => 'Пароль';
+  String get password => 'Parol';
 
   @override
-  String get enterPassword => 'Введите пароль';
+  String get enterPassword => 'Parolni kiriting';
+
+  @override
+  String get confirmPassword => 'Parolni tasdiqlang';
+
+  @override
+  String get weSendOtpTo => 'Tasdiqlash kodi ushbu raqamga yuborildi';
+
+  @override
+  String get resendOtp => 'Qayta yuborish';
+
+  @override
+  String get passportSeriesOrPinfl => 'Passport seriyasi va raqami yoki PINFL';
+
+  @override
+  String get passportFieldHint => 'AA1234567 | PINFL';
+
+  @override
+  String minimumCharacters(int count) {
+    return 'Kamida $count ta belgi';
+  }
+
+  @override
+  String get birthDate => 'Tug\'ilgan sana';
+
+  @override
+  String get birthDateHint => 'KK.OO.YYYY';
+
+  @override
+  String get confirm => 'Tasdiqlash';
+
+  @override
+  String get setPasswordTitle => 'Parolni o\'rnatish';
+
+  @override
+  String get passwordsDoNotMatch => 'Parollar mos emas';
+
+  @override
+  String passwordTooShort(int count) {
+    return 'Parol kamida $count ta belgidan iborat bo\'lishi kerak';
+  }
 }

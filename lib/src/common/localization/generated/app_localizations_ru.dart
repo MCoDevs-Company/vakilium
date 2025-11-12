@@ -46,4 +46,44 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get enterPassword => 'Введите пароль';
+
+  @override
+  String get confirmPassword => 'Подтвердите пароль';
+
+  @override
+  String get weSendOtpTo => 'Мы отпавили код подтверждения на номер';
+
+  @override
+  String get resendOtp => 'Отправить занова';
+
+  @override
+  String get passportSeriesOrPinfl => 'Серия и номер паспорта или ПИНФЛ';
+
+  @override
+  String get passportFieldHint => 'AA1234567 | ПИНФЛ';
+
+  @override
+  String minimumCharacters(int count) {
+    return 'Минимум $count символов';
+  }
+
+  @override
+  String get birthDate => 'Дата рождения';
+
+  @override
+  String get birthDateHint => 'ДД.ММ.ГГГГ';
+
+  @override
+  String get confirm => 'Подтвердить';
+
+  @override
+  String get setPasswordTitle => 'Установка пароля';
+
+  @override
+  String get passwordsDoNotMatch => 'Пароли не совпадают';
+
+  @override
+  String passwordTooShort(int count) {
+    return 'Пароль должен содержать минимум $count символов';
+  }
 }

@@ -90,7 +90,10 @@ abstract class AppLocalizations {
   ];
 
   /// A list of this localizations delegate's supported locales.
-  static const List<Locale> supportedLocales = <Locale>[Locale('ru'), Locale('uz')];
+  static const List<Locale> supportedLocales = <Locale>[
+    Locale('ru'),
+    Locale('uz')
+  ];
 
   /// No description provided for @localeName.
   ///
@@ -169,6 +172,78 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Введите пароль'**
   String get enterPassword;
+
+  /// No description provided for @confirmPassword.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подтвердите пароль'**
+  String get confirmPassword;
+
+  /// No description provided for @weSendOtpTo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мы отпавили код подтверждения на номер'**
+  String get weSendOtpTo;
+
+  /// No description provided for @resendOtp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отправить занова'**
+  String get resendOtp;
+
+  /// No description provided for @passportSeriesOrPinfl.
+  ///
+  /// In ru, this message translates to:
+  /// **'Серия и номер паспорта или ПИНФЛ'**
+  String get passportSeriesOrPinfl;
+
+  /// No description provided for @passportFieldHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'AA1234567 | ПИНФЛ'**
+  String get passportFieldHint;
+
+  /// No description provided for @minimumCharacters.
+  ///
+  /// In ru, this message translates to:
+  /// **'Минимум {count} символов'**
+  String minimumCharacters(int count);
+
+  /// No description provided for @birthDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дата рождения'**
+  String get birthDate;
+
+  /// No description provided for @birthDateHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'ДД.ММ.ГГГГ'**
+  String get birthDateHint;
+
+  /// No description provided for @confirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подтвердить'**
+  String get confirm;
+
+  /// No description provided for @setPasswordTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Установка пароля'**
+  String get setPasswordTitle;
+
+  /// No description provided for @passwordsDoNotMatch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пароли не совпадают'**
+  String get passwordsDoNotMatch;
+
+  /// No description provided for @passwordTooShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пароль должен содержать минимум {count} символов'**
+  String passwordTooShort(int count);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -187,18 +262,18 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'ru':
-      return AppLocalizationsRu();
-    case 'uz':
-      return AppLocalizationsUz();
+    case 'ru': return AppLocalizationsRu();
+    case 'uz': return AppLocalizationsUz();
   }
 
   throw FlutterError(
     'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
     'an issue with the localizations generation tool. Please file an issue '
     'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
+    'that was used.'
   );
 }
