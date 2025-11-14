@@ -18,17 +18,17 @@ class GeneratedLocalization {
   static GeneratedLocalization? _current;
 
   static GeneratedLocalization get current {
-    assert(_current != null,
-        'No instance of GeneratedLocalization was loaded. Try to initialize the GeneratedLocalization delegate before accessing GeneratedLocalization.current.');
+    assert(
+      _current != null,
+      'No instance of GeneratedLocalization was loaded. Try to initialize the GeneratedLocalization delegate before accessing GeneratedLocalization.current.',
+    );
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<GeneratedLocalization> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -41,114 +41,65 @@ class GeneratedLocalization {
 
   static GeneratedLocalization of(BuildContext context) {
     final instance = GeneratedLocalization.maybeOf(context);
-    assert(instance != null,
-        'No instance of GeneratedLocalization present in the widget tree. Did you add GeneratedLocalization.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of GeneratedLocalization present in the widget tree. Did you add GeneratedLocalization.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
   static GeneratedLocalization? maybeOf(BuildContext context) {
-    return Localizations.of<GeneratedLocalization>(
-        context, GeneratedLocalization);
+    return Localizations.of<GeneratedLocalization>(context, GeneratedLocalization);
   }
 
   /// `ru_RU`
   String get localeName {
-    return Intl.message(
-      'ru_RU',
-      name: 'localeName',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ru_RU', name: 'localeName', desc: '', args: []);
   }
 
   /// `ru`
   String get localeCode {
-    return Intl.message(
-      'ru',
-      name: 'localeCode',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ru', name: 'localeCode', desc: '', args: []);
   }
 
   /// ``
   String get localeScriptCode {
-    return Intl.message(
-      '',
-      name: 'localeScriptCode',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('', name: 'localeScriptCode', desc: '', args: []);
   }
 
   /// `ru`
   String get languageCode {
-    return Intl.message(
-      'ru',
-      name: 'languageCode',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ru', name: 'languageCode', desc: '', args: []);
   }
 
   /// `Русский`
   String get language {
-    return Intl.message(
-      'Русский',
-      name: 'language',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Русский', name: 'language', desc: '', args: []);
   }
 
   /// `Войти`
   String get loginTitle {
-    return Intl.message(
-      'Войти',
-      name: 'loginTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Войти', name: 'loginTitle', desc: '', args: []);
   }
 
   /// `Забыли пароль?`
   String get forgotPassword {
-    return Intl.message(
-      'Забыли пароль?',
-      name: 'forgotPassword',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Забыли пароль?', name: 'forgotPassword', desc: '', args: []);
   }
 
   /// `Номер телефона`
   String get phoneNumber {
-    return Intl.message(
-      'Номер телефона',
-      name: 'phoneNumber',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Номер телефона', name: 'phoneNumber', desc: '', args: []);
   }
 
   /// `Введите номер телефона`
   String get enterPhoneNumber {
-    return Intl.message(
-      'Введите номер телефона',
-      name: 'enterPhoneNumber',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Введите номер телефона', name: 'enterPhoneNumber', desc: '', args: []);
   }
 
   /// `Регистрация`
   String get registerTitle {
-    return Intl.message(
-      'Регистрация',
-      name: 'registerTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Регистрация', name: 'registerTitle', desc: '', args: []);
   }
 
   /// `Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения`
@@ -163,132 +114,67 @@ class GeneratedLocalization {
 
   /// `Пароль`
   String get password {
-    return Intl.message(
-      'Пароль',
-      name: 'password',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Пароль', name: 'password', desc: '', args: []);
   }
 
   /// `Введите пароль`
   String get enterPassword {
-    return Intl.message(
-      'Введите пароль',
-      name: 'enterPassword',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Введите пароль', name: 'enterPassword', desc: '', args: []);
   }
 
   /// `Подтвердите пароль`
   String get confirmPassword {
-    return Intl.message(
-      'Подтвердите пароль',
-      name: 'confirmPassword',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Подтвердите пароль', name: 'confirmPassword', desc: '', args: []);
   }
 
   /// `Мы отпавили код подтверждения на номер`
   String get weSendOtpTo {
-    return Intl.message(
-      'Мы отпавили код подтверждения на номер',
-      name: 'weSendOtpTo',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Мы отпавили код подтверждения на номер', name: 'weSendOtpTo', desc: '', args: []);
   }
 
   /// `Отправить занова`
   String get resendOtp {
-    return Intl.message(
-      'Отправить занова',
-      name: 'resendOtp',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Отправить занова', name: 'resendOtp', desc: '', args: []);
   }
 
   /// `Серия и номер паспорта или ПИНФЛ`
   String get passportSeriesOrPinfl {
-    return Intl.message(
-      'Серия и номер паспорта или ПИНФЛ',
-      name: 'passportSeriesOrPinfl',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Серия и номер паспорта или ПИНФЛ', name: 'passportSeriesOrPinfl', desc: '', args: []);
   }
 
   /// `AA1234567 | ПИНФЛ`
   String get passportFieldHint {
-    return Intl.message(
-      'AA1234567 | ПИНФЛ',
-      name: 'passportFieldHint',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('AA1234567 | ПИНФЛ', name: 'passportFieldHint', desc: '', args: []);
   }
 
   /// `Минимум {count} символов`
   String minimumCharacters(int count) {
-    return Intl.message(
-      'Минимум $count символов',
-      name: 'minimumCharacters',
-      desc: '',
-      args: [count],
-    );
+    return Intl.message('Минимум $count символов', name: 'minimumCharacters', desc: '', args: [count]);
   }
 
   /// `Дата рождения`
   String get birthDate {
-    return Intl.message(
-      'Дата рождения',
-      name: 'birthDate',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Дата рождения', name: 'birthDate', desc: '', args: []);
   }
 
   /// `ДД.ММ.ГГГГ`
   String get birthDateHint {
-    return Intl.message(
-      'ДД.ММ.ГГГГ',
-      name: 'birthDateHint',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ДД.ММ.ГГГГ', name: 'birthDateHint', desc: '', args: []);
   }
 
   /// `Подтвердить`
   String get confirm {
-    return Intl.message(
-      'Подтвердить',
-      name: 'confirm',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Подтвердить', name: 'confirm', desc: '', args: []);
   }
 
   /// `Установка пароля`
   String get setPasswordTitle {
-    return Intl.message(
-      'Установка пароля',
-      name: 'setPasswordTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Установка пароля', name: 'setPasswordTitle', desc: '', args: []);
   }
 
   /// `Пароли не совпадают`
   String get passwordsDoNotMatch {
-    return Intl.message(
-      'Пароли не совпадают',
-      name: 'passwordsDoNotMatch',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Пароли не совпадают', name: 'passwordsDoNotMatch', desc: '', args: []);
   }
 
   /// `Пароль должен содержать минимум {count} символов`
@@ -302,22 +188,17 @@ class GeneratedLocalization {
   }
 }
 
-class AppLocalizationDelegate
-    extends LocalizationsDelegate<GeneratedLocalization> {
+class AppLocalizationDelegate extends LocalizationsDelegate<GeneratedLocalization> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[
-      Locale.fromSubtags(languageCode: 'ru'),
-      Locale.fromSubtags(languageCode: 'uz'),
-    ];
+    return const <Locale>[Locale.fromSubtags(languageCode: 'ru'), Locale.fromSubtags(languageCode: 'uz')];
   }
 
   @override
   bool isSupported(Locale locale) => _isSupported(locale);
   @override
-  Future<GeneratedLocalization> load(Locale locale) =>
-      GeneratedLocalization.load(locale);
+  Future<GeneratedLocalization> load(Locale locale) => GeneratedLocalization.load(locale);
   @override
   bool shouldReload(AppLocalizationDelegate old) => false;
 

@@ -39,7 +39,8 @@ class AppLocalizationsUz extends AppLocalizations {
   String get registerTitle => 'Ro\'yxatdan o\'tish';
 
   @override
-  String get registerAgreement => 'Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz';
+  String get registerAgreement =>
+      'Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz';
 
   @override
   String get password => 'Parol';
