@@ -39,6 +39,9 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/auth_background.jpg
+  AssetGenImage get authBackground => const AssetGenImage('assets/images/auth_background.jpg');
+
   /// File path: assets/images/flag_ru.png
   AssetGenImage get flagRu => const AssetGenImage('assets/images/flag_ru.png');
 
@@ -49,7 +52,7 @@ class $AssetsImagesGen {
   AssetGenImage get vakilium => const AssetGenImage('assets/images/vakilium.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [flagRu, flagUz, vakilium];
+  List<AssetGenImage> get values => [authBackground, flagRu, flagUz, vakilium];
 }
 
 class Assets {

@@ -33,7 +33,7 @@ class AuthTopWidget extends StatelessWidget {
                     padding: Dimension.pH16Top16,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [AppLogo(), LanguageSelector()],
+                      children: [AppLogo.horizontal(), LanguageSelector()],
                     ),
                   ),
                 ),

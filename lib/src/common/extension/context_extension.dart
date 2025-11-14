@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -29,9 +28,11 @@ extension BuildContextX on BuildContext {
 extension SizeX on BuildContext {
   Size get pageSize => MediaQuery.sizeOf(this);
 
-  bool get isMobile => kSize.width < 600 && (Platform.isAndroid || Platform.isIOS);
-
-  bool get isTablet => kSize.width > 600 && (Platform.isAndroid || Platform.isIOS);
+  T responsive<T>({required T mobile, required T desktop}) {
+    final width = kSize.width;
+    if (width < 1024) return mobile;
+    return desktop;
+  }
 
   Size get kSize => MediaQuery.sizeOf(this);
 

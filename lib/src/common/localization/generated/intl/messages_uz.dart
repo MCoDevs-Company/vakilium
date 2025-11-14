@@ -27,50 +27,41 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "birthDate": MessageLookupByLibrary.simpleMessage("Tug\'ilgan sana"),
-    "birthDateHint": MessageLookupByLibrary.simpleMessage("KK.OO.YYYY"),
-    "confirm": MessageLookupByLibrary.simpleMessage("Tasdiqlash"),
-    "confirmPassword": MessageLookupByLibrary.simpleMessage(
-      "Parolni tasdiqlang",
-    ),
-    "enterPassword": MessageLookupByLibrary.simpleMessage("Parolni kiriting"),
-    "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
-      "Telefon raqamni kiriting",
-    ),
-    "forgotPassword": MessageLookupByLibrary.simpleMessage(
-      "Parolni unutdingiz?",
-    ),
-    "language": MessageLookupByLibrary.simpleMessage("O\'zbek"),
-    "languageCode": MessageLookupByLibrary.simpleMessage("uz"),
-    "localeCode": MessageLookupByLibrary.simpleMessage("uz"),
-    "localeName": MessageLookupByLibrary.simpleMessage("uz_UZ"),
-    "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
-    "loginTitle": MessageLookupByLibrary.simpleMessage("Kirish"),
-    "minimumCharacters": m0,
-    "passportFieldHint": MessageLookupByLibrary.simpleMessage(
-      "AA1234567 | PINFL",
-    ),
-    "passportSeriesOrPinfl": MessageLookupByLibrary.simpleMessage(
-      "Passport seriyasi va raqami yoki PINFL",
-    ),
-    "password": MessageLookupByLibrary.simpleMessage("Parol"),
-    "passwordTooShort": m1,
-    "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
-      "Parollar mos emas",
-    ),
-    "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqam"),
-    "registerAgreement": MessageLookupByLibrary.simpleMessage(
-      "Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz",
-    ),
-    "registerTitle": MessageLookupByLibrary.simpleMessage(
-      "Ro\'yxatdan o\'tish",
-    ),
-    "resendOtp": MessageLookupByLibrary.simpleMessage("Qayta yuborish"),
-    "setPasswordTitle": MessageLookupByLibrary.simpleMessage(
-      "Parolni o\'rnatish",
-    ),
-    "weSendOtpTo": MessageLookupByLibrary.simpleMessage(
-      "Tasdiqlash kodi ushbu raqamga yuborildi",
-    ),
-  };
+        "birthDate": MessageLookupByLibrary.simpleMessage("Tug\'ilgan sana"),
+        "birthDateHint": MessageLookupByLibrary.simpleMessage("KK.OO.YYYY"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Tasdiqlash"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Parolni tasdiqlang"),
+        "enterPassword":
+            MessageLookupByLibrary.simpleMessage("Parolni kiriting"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Telefon raqamni kiriting"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Parolni unutdingiz?"),
+        "language": MessageLookupByLibrary.simpleMessage("O\'zbek"),
+        "languageCode": MessageLookupByLibrary.simpleMessage("uz"),
+        "localeCode": MessageLookupByLibrary.simpleMessage("uz"),
+        "localeName": MessageLookupByLibrary.simpleMessage("uz_UZ"),
+        "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("Kirish"),
+        "minimumCharacters": m0,
+        "passportFieldHint":
+            MessageLookupByLibrary.simpleMessage("AA1234567 | PINFL"),
+        "passportSeriesOrPinfl": MessageLookupByLibrary.simpleMessage(
+            "Passport seriyasi va raqami yoki PINFL"),
+        "password": MessageLookupByLibrary.simpleMessage("Parol"),
+        "passwordTooShort": m1,
+        "passwordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("Parollar mos emas"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqam"),
+        "registerAgreement": MessageLookupByLibrary.simpleMessage(
+            "Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz"),
+        "registerTitle":
+            MessageLookupByLibrary.simpleMessage("Ro\'yxatdan o\'tish"),
+        "resendOtp": MessageLookupByLibrary.simpleMessage("Qayta yuborish"),
+        "setPasswordTitle":
+            MessageLookupByLibrary.simpleMessage("Parolni o\'rnatish"),
+        "weSendOtpTo": MessageLookupByLibrary.simpleMessage(
+            "Tasdiqlash kodi ushbu raqamga yuborildi")
+      };
 }

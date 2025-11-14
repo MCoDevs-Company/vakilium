@@ -1,5 +1,3 @@
-import 'dart:io' show Platform;
-
 import 'package:flutter/material.dart';
 
 sealed class Constants {
@@ -9,7 +7,7 @@ sealed class Constants {
   static const tvRainSiteImage = 'https://api.tvrain.tv/v3';
   static const tvRainDonateSite = 'https://tvrain.donorsupport.co/-/XKLDKVYV';
 
-  static final appLink = Platform.isIOS ? 'https://www.apple.com/app-store/' : 'https://play.google.com/store/';
+  // static final appLink = Platform.isIOS ? 'https://www.apple.com/app-store/' : 'https://play.google.com/store/';
   static const packageName = 'ru.raintv.rain';
 
   static const defaultPageSize = 30;

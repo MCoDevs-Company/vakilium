@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 
-import 'package:flutter/material.dart' show ThemeMode, Locale;
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart' show ThemeMode, Locale, WidgetsBinding;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'interface/localization_data_source.dart';
@@ -80,7 +81,13 @@ final class LocalSource extends PreferenceDao implements UserDataSource, Localiz
 }
 
 /// Default locale
-String get _defaultLocale => switch (Platform.localeName.split('-').first) {
-  'ru' => 'ru',
-  _ => 'ru',
-};
+String get _defaultLocale {
+  if (kIsWeb) {
+    final locale = WidgetsBinding.instance.platformDispatcher.locale;
+    return locale.toLanguageTag();
+  }
+  return switch (Platform.localeName.split('-').first) {
+    'ru' => 'ru',
+    _ => 'ru',
+  };
+}

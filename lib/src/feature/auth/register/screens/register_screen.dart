@@ -16,7 +16,74 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends RegisterController {
   @override
-  Widget build(BuildContext context) => ColoredBox(
+  Widget build(BuildContext context) => context.responsive(mobile: _buildMobile(), desktop: _buildDesktop());
+
+  Widget _buildDesktop() => ColoredBox(
+    color: context.color.white,
+    child: Center(
+      child: SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 480),
+          child: Padding(
+            padding: Dimension.pH40,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  context.l10n.registerTitle,
+                  style: context.textTheme.interW600s24.copyWith(fontSize: 32),
+                  textAlign: TextAlign.start,
+                ),
+                Dimension.hBox32,
+                Form(
+                  key: formKey,
+                  child: AppTextField(
+                    prefixIcon: Padding(padding: Dimension.pH10, child: Assets.icons.globus.svg(height: 24, width: 24)),
+                    label: context.l10n.phoneNumber,
+                    hintText: "+998 __ ___-__-__",
+                    inputFormatter: mask,
+                    keyboardType: TextInputType.phone,
+                    controller: phoneNumberController,
+                  ),
+                ),
+                Dimension.hBox24,
+                RichText(
+                  textAlign: TextAlign.start,
+                  text: TextSpan(
+                    text: "Регистрируясь, вы соглашаетесь с правилами ",
+                    style: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
+                    children: [
+                      TextSpan(
+                        text: "пользовательское соглашение",
+                        style: context.textTheme.interW400s14.copyWith(color: context.color.primary),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            // TODO: Open user agreement
+                          },
+                      ),
+                    ],
+                  ),
+                ),
+                Dimension.hBox24,
+                ValueListenableBuilder(
+                  valueListenable: phoneNumberController,
+                  builder: (context, phone, child) {
+                    final isEnabled = mask.unmaskText(phone.text).length == 9;
+                    return AppButton(onPressed: isEnabled ? onRegister : null, title: context.l10n.registerTitle);
+                  },
+                ),
+                Dimension.hBox8,
+                AppButton(onPressed: onLoginPressed, title: context.l10n.loginTitle, isPrimary: false),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+
+  Widget _buildMobile() => ColoredBox(
     color: context.color.white,
     child: LayoutBuilder(
       builder: (context, constraints) => SingleChildScrollView(
