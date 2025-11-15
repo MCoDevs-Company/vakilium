@@ -17,7 +17,7 @@ jobs:
       - name: Flutter pub get
         run: flutter pub get
       - name: Build Flutter web
-        run: flutter build web --release
+        run: flutter build web --release --dart-define=config.platform=web --dart-define=YANDEX_MAPKIT_API_KEY=${{ secrets.YANDEX_MAPKIT_API_KEY }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
