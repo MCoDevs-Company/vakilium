@@ -9,9 +9,8 @@ import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/router/router.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
 import 'package:vakilium/src/common/util/logger.dart';
-import 'package:vakilium/src/feature/auth/otp/screens/otp_screen.dart';
 
-abstract class OtpController extends State<OtpScreen> {
+abstract class OtpController<T extends StatefulWidget> extends State<T> {
   static const otpLength = 6;
   static const Duration _initialCountdown = Duration(seconds: 60);
 
@@ -28,7 +27,7 @@ abstract class OtpController extends State<OtpScreen> {
     startResendTimer();
   }
 
-  Widget buildPhoneNumberChip(BuildContext context) => GestureDetector(
+  Widget buildPhoneNumberChip(BuildContext context, String phoneNumber) => GestureDetector(
     onTap: () => context.pop(),
     child: Container(
       decoration: BoxDecoration(color: context.color.textFieldBackground, borderRadius: Dimension.rAll8),
@@ -36,7 +35,7 @@ abstract class OtpController extends State<OtpScreen> {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(widget.phoneNumber, style: context.textTheme.interW400s16),
+          Text(phoneNumber, style: context.textTheme.interW400s16),
           Dimension.wBox8,
           Assets.icons.edit.svg(height: 20, width: 20),
         ],
@@ -140,15 +139,7 @@ abstract class OtpController extends State<OtpScreen> {
     // ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Код повторно отправлен')));
   }
 
-  Future<void> submit() async {
-    if (!mounted) return;
-    final code = otpController.text;
-    info('code: $code');
-    await Future.delayed(const Duration(seconds: 2), () {
-      context.goNamed(Routes.userInfo);
-    });
-    // ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Введён код: $code')));
-  }
+  Future<void> submit();
 
   @override
   void dispose() {

@@ -27,7 +27,7 @@ class _AppButtonState extends State<AppButton> {
           },
       disabledBackgroundColor: context.color.textFieldBackground,
       shape: const RoundedRectangleBorder(borderRadius: Dimension.rAll12),
-      minimumSize: Size.fromHeight(context.responsive(mobile: 44, desktop: 54)),
+      minimumSize: const Size.fromHeight(54),
       padding: Dimension.pV10H12,
     ),
 

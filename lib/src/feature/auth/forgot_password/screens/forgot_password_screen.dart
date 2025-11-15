@@ -7,14 +7,14 @@ import 'package:vakilium/src/common/widgets/app_button.dart';
 import 'package:vakilium/src/common/widgets/app_text_field.dart';
 import 'package:vakilium/src/feature/auth/register/controller/register_controller.dart';
 
-class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+class ForgotPasswordScreen extends StatefulWidget {
+  const ForgotPasswordScreen({super.key});
 
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
+  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
 }
 
-class _RegisterScreenState extends RegisterController<RegisterScreen> {
+class _ForgotPasswordScreenState extends RegisterController<ForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) => context.responsive(mobile: _buildMobile(), desktop: _buildDesktop());
 
@@ -31,11 +31,11 @@ class _RegisterScreenState extends RegisterController<RegisterScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  context.l10n.registerTitle,
+                  context.l10n.recoverPassword,
                   style: context.textTheme.interW600s24.copyWith(fontSize: 32),
                   textAlign: TextAlign.start,
                 ),
-                Dimension.hBox32,
+                Dimension.hBox24,
                 Form(
                   key: formKey,
                   child: AppTextField(
@@ -48,33 +48,13 @@ class _RegisterScreenState extends RegisterController<RegisterScreen> {
                   ),
                 ),
                 Dimension.hBox24,
-                RichText(
-                  textAlign: TextAlign.start,
-                  text: TextSpan(
-                    text: "Регистрируясь, вы соглашаетесь с правилами ",
-                    style: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
-                    children: [
-                      TextSpan(
-                        text: "пользовательское соглашение",
-                        style: context.textTheme.interW400s14.copyWith(color: context.color.primary),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            // TODO: Open user agreement
-                          },
-                      ),
-                    ],
-                  ),
-                ),
-                Dimension.hBox24,
                 ValueListenableBuilder(
                   valueListenable: phoneNumberController,
                   builder: (context, phone, child) {
                     final isEnabled = mask.unmaskText(phone.text).length == 9;
-                    return AppButton(onPressed: isEnabled ? onRegister : null, title: context.l10n.registerTitle);
+                    return AppButton(onPressed: isEnabled ? onConfirmPressed : null, title: context.l10n.confirm);
                   },
                 ),
-                Dimension.hBox16,
-                AppButton(onPressed: onLoginPressed, title: context.l10n.loginTitle, isPrimary: false),
               ],
             ),
           ),
@@ -99,7 +79,7 @@ class _RegisterScreenState extends RegisterController<RegisterScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text(context.l10n.registerTitle, style: context.textTheme.interW600s24),
+                        Text(context.l10n.recoverPassword, style: context.textTheme.interW600s24),
                         Dimension.hBox24,
                         Form(
                           key: formKey,
@@ -120,34 +100,14 @@ class _RegisterScreenState extends RegisterController<RegisterScreen> {
                     ),
                   ),
                 ),
-                Dimension.hBox8,
-                RichText(
-                  // TODO: Add user agreement with localization
-                  text: TextSpan(
-                    text: "Регистрируясь, вы соглашаетесь с правилами ",
-                    style: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
-                    children: [
-                      TextSpan(
-                        text: "пользовательское соглашение",
-                        style: context.textTheme.interW400s14.copyWith(color: context.color.primary),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            // TODO: Open user agreement
-                          },
-                      ),
-                    ],
-                  ),
-                ),
-                Dimension.hBox20,
+                Dimension.hBox24,
                 ValueListenableBuilder(
                   valueListenable: phoneNumberController,
                   builder: (context, phone, child) {
                     final isEnabled = mask.unmaskText(phone.text).length == 9;
-                    return AppButton(onPressed: isEnabled ? onRegister : null, title: context.l10n.registerTitle);
+                    return AppButton(onPressed: isEnabled ? onConfirmPressed : null, title: context.l10n.confirm);
                   },
                 ),
-                Dimension.hBox8,
-                AppButton(onPressed: onLoginPressed, title: context.l10n.loginTitle, isPrimary: false),
               ],
             ),
           ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:vakilium/src/feature/auth/forgot_password/screens/forgot_password_screen.dart';
+import 'package:vakilium/src/feature/auth/otp/screens/recover_otp_screen.dart';
 import 'package:vakilium/src/feature/auth/login/screens/login_screen.dart';
 import 'package:vakilium/src/feature/auth/new_password/screens/new_password_screen.dart';
 import 'package:vakilium/src/feature/auth/otp/screens/otp_screen.dart';
@@ -48,6 +50,24 @@ sealed class Routes {
               GoRoute(path: newPassword, name: newPassword, builder: (context, state) => const NewPasswordScreen()),
             ],
           ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: forgotPassword,
+                name: forgotPassword,
+                builder: (context, state) => const ForgotPasswordScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: recoverOtp,
+                name: recoverOtp,
+                builder: (context, state) => RecoverOtpScreen(phoneNumber: state.extra as String),
+              ),
+            ],
+          ),
         ],
       ),
     ],
@@ -59,4 +79,6 @@ sealed class Routes {
   static const String otp = '/otp';
   static const String userInfo = '/user-info';
   static const String newPassword = '/new-password';
+  static const String forgotPassword = '/forgot-password';
+  static const String recoverOtp = '/recover-otp';
 }

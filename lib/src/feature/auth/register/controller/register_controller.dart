@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:vakilium/src/common/router/router.dart';
-import 'package:vakilium/src/feature/auth/register/screens/register_screen.dart';
 
-abstract class RegisterController extends State<RegisterScreen> {
+abstract class RegisterController<T extends StatefulWidget> extends State<T> {
   late final TextEditingController phoneNumberController;
   final mask = MaskTextInputFormatter(mask: '+998 ## ###-##-##');
   final formKey = GlobalKey<FormState>();
@@ -25,6 +24,8 @@ abstract class RegisterController extends State<RegisterScreen> {
     if (!formKey.currentState!.validate()) return;
     context.pushNamed(Routes.otp, extra: phoneNumberController.text);
   }
+
+  void onConfirmPressed() => context.goNamed(Routes.recoverOtp, extra: phoneNumberController.text);
 
   void onLoginPressed() => context.goNamed(Routes.login);
 }

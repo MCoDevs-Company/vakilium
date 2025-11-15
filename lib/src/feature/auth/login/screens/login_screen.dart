@@ -54,7 +54,7 @@ class _LoginScreenState extends LoginController {
                 ),
                 Dimension.hBox8,
                 GestureDetector(
-                  onTap: () {},
+                  onTap: onForgotPasswordPressed,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [

@@ -22,36 +22,45 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(count) => "Минимум ${count} символов";
 
-  static String m1(count) => "Пароль должен содержать минимум ${count} символов";
+  static String m1(count) =>
+      "Пароль должен содержать минимум ${count} символов";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "birthDate": MessageLookupByLibrary.simpleMessage("Дата рождения"),
-    "birthDateHint": MessageLookupByLibrary.simpleMessage("ДД.ММ.ГГГГ"),
-    "confirm": MessageLookupByLibrary.simpleMessage("Подтвердить"),
-    "confirmPassword": MessageLookupByLibrary.simpleMessage("Подтвердите пароль"),
-    "enterPassword": MessageLookupByLibrary.simpleMessage("Введите пароль"),
-    "enterPhoneNumber": MessageLookupByLibrary.simpleMessage("Введите номер телефона"),
-    "forgotPassword": MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
-    "language": MessageLookupByLibrary.simpleMessage("Русский"),
-    "languageCode": MessageLookupByLibrary.simpleMessage("ru"),
-    "localeCode": MessageLookupByLibrary.simpleMessage("ru"),
-    "localeName": MessageLookupByLibrary.simpleMessage("ru_RU"),
-    "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
-    "loginTitle": MessageLookupByLibrary.simpleMessage("Войти"),
-    "minimumCharacters": m0,
-    "passportFieldHint": MessageLookupByLibrary.simpleMessage("AA1234567 | ПИНФЛ"),
-    "passportSeriesOrPinfl": MessageLookupByLibrary.simpleMessage("Серия и номер паспорта или ПИНФЛ"),
-    "password": MessageLookupByLibrary.simpleMessage("Пароль"),
-    "passwordTooShort": m1,
-    "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage("Пароли не совпадают"),
-    "phoneNumber": MessageLookupByLibrary.simpleMessage("Номер телефона"),
-    "registerAgreement": MessageLookupByLibrary.simpleMessage(
-      "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения",
-    ),
-    "registerTitle": MessageLookupByLibrary.simpleMessage("Регистрация"),
-    "resendOtp": MessageLookupByLibrary.simpleMessage("Отправить занова"),
-    "setPasswordTitle": MessageLookupByLibrary.simpleMessage("Установка пароля"),
-    "weSendOtpTo": MessageLookupByLibrary.simpleMessage("Мы отпавили код подтверждения на номер"),
-  };
+        "birthDate": MessageLookupByLibrary.simpleMessage("Дата рождения"),
+        "birthDateHint": MessageLookupByLibrary.simpleMessage("ДД.ММ.ГГГГ"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Подтвердить"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Подтвердите пароль"),
+        "enterPassword": MessageLookupByLibrary.simpleMessage("Введите пароль"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Введите номер телефона"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
+        "language": MessageLookupByLibrary.simpleMessage("Русский"),
+        "languageCode": MessageLookupByLibrary.simpleMessage("ru"),
+        "localeCode": MessageLookupByLibrary.simpleMessage("ru"),
+        "localeName": MessageLookupByLibrary.simpleMessage("ru_RU"),
+        "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("Войти"),
+        "minimumCharacters": m0,
+        "passportFieldHint":
+            MessageLookupByLibrary.simpleMessage("AA1234567 | ПИНФЛ"),
+        "passportSeriesOrPinfl": MessageLookupByLibrary.simpleMessage(
+            "Серия и номер паспорта или ПИНФЛ"),
+        "password": MessageLookupByLibrary.simpleMessage("Пароль"),
+        "passwordTooShort": m1,
+        "passwordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("Пароли не совпадают"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Номер телефона"),
+        "recoverPassword": MessageLookupByLibrary.simpleMessage("Сброс пароля"),
+        "registerAgreement": MessageLookupByLibrary.simpleMessage(
+            "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("Регистрация"),
+        "resendOtp": MessageLookupByLibrary.simpleMessage("Отправить занова"),
+        "setPasswordTitle":
+            MessageLookupByLibrary.simpleMessage("Установка пароля"),
+        "weSendOtpTo": MessageLookupByLibrary.simpleMessage(
+            "Мы отпавили код подтверждения на номер")
+      };
 }

@@ -22,4 +22,6 @@ abstract class LoginController extends State<LoginScreen> {
   }
 
   void onRegisterPressed() => context.goNamed(Routes.register);
+
+  void onForgotPasswordPressed() => context.goNamed(Routes.forgotPassword);
 }

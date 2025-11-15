@@ -7,16 +7,15 @@ import 'package:vakilium/src/common/util/logger.dart';
 import 'package:vakilium/src/common/widgets/app_circular_indicator.dart';
 import 'package:vakilium/src/feature/auth/otp/controller/otp_controller.dart';
 
-class OtpScreen extends StatefulWidget {
-  const OtpScreen({required this.phoneNumber, super.key});
-
+class RecoverOtpScreen extends StatefulWidget {
+  const RecoverOtpScreen({required this.phoneNumber, super.key});
   final String phoneNumber;
 
   @override
-  State<OtpScreen> createState() => _OtpScreenState();
+  State<RecoverOtpScreen> createState() => _RecoverOtpScreenState();
 }
 
-class _OtpScreenState extends OtpController<OtpScreen> {
+class _RecoverOtpScreenState extends OtpController<RecoverOtpScreen> {
   @override
   Widget build(BuildContext context) => context.responsive(mobile: _buildMobile(), desktop: _buildDesktop());
 
@@ -33,7 +32,7 @@ class _OtpScreenState extends OtpController<OtpScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  context.l10n.registerTitle,
+                  context.l10n.recoverPassword,
                   style: context.textTheme.interW600s24.copyWith(fontSize: 32),
                   textAlign: TextAlign.start,
                 ),
@@ -76,7 +75,7 @@ class _OtpScreenState extends OtpController<OtpScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(context.l10n.registerTitle, style: context.textTheme.interW600s24),
+                  Text(context.l10n.recoverPassword, style: context.textTheme.interW600s24),
                   Dimension.hBox8,
                   Text(
                     context.l10n.weSendOtpTo,
@@ -111,7 +110,7 @@ class _OtpScreenState extends OtpController<OtpScreen> {
     final code = otpController.text;
     info('code: $code');
     await Future.delayed(const Duration(seconds: 2), () {
-      context.goNamed(Routes.userInfo);
+      context.goNamed(Routes.newPassword);
     });
   }
 }

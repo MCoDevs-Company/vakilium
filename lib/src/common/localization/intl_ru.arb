@@ -38,5 +38,6 @@
         "type": "int"
       }
     }
-  }
+  },
+  "recoverPassword": "Сброс пароля"
 }
