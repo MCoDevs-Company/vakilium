@@ -11,20 +11,20 @@ import 'package:vakilium/src/feature/auth/widgets/auth_shell.dart';
 import 'package:vakilium/src/feature/splash/screens/splash_screen.dart';
 
 sealed class Routes {
-  static final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> authShellKey = GlobalKey<NavigatorState>();
 
   static final GoRouter router = GoRouter(
-    navigatorKey: _rootNavigatorKey,
+    navigatorKey: rootNavigatorKey,
     initialLocation: splash,
     routes: [
       GoRoute(path: splash, name: splash, builder: (context, state) => const SplashScreen()),
       StatefulShellRoute.indexedStack(
-        parentNavigatorKey: _rootNavigatorKey,
+        parentNavigatorKey: rootNavigatorKey,
         pageBuilder: (context, state, navigationShell) => CustomTransitionPage(
-          child: AuthShell(child: navigationShell),
+          child: AuthShell(authKey: authShellKey, child: navigationShell),
           transitionDuration: Durations.extralong2,
-          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-              FadeTransition(opacity: animation, child: child),
+          transitionsBuilder: (context, animation, _, child) => FadeTransition(opacity: animation, child: child),
         ),
         branches: [
           StatefulShellBranch(

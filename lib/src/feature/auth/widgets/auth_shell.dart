@@ -7,7 +7,8 @@ import 'package:vakilium/src/feature/auth/widgets/auth_top_widget.dart';
 
 /// Hosts the shared purple header and rounded white content container.
 class AuthShell extends StatefulWidget {
-  const AuthShell({required this.child, super.key});
+  const AuthShell({required this.child, required this.authKey, super.key});
+  final GlobalKey<NavigatorState> authKey;
 
   final Widget child;
 
@@ -18,6 +19,7 @@ class AuthShell extends StatefulWidget {
 class _AuthShellState extends State<AuthShell> {
   @override
   Widget build(BuildContext context) => Scaffold(
+    key: widget.authKey,
     body: context.responsive(mobile: _buildMobile(), desktop: _buildDesktop()),
   );
 

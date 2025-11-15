@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
+import 'package:vakilium/src/common/router/router.dart';
 import 'package:vakilium/src/common/util/logger.dart';
 import 'package:vakilium/src/common/util/notification_manager.dart';
 import 'package:vakilium/src/feature/auth/new_password/screens/new_password_screen.dart';
@@ -55,9 +56,11 @@ abstract class NewPasswordController extends State<NewPasswordScreen> {
     final password = passwordController.text.trim();
     final confirmPassword = confirmPasswordController.text.trim();
 
+    final globalContext = context.responsive(mobile: Routes.authShellKey.currentContext, desktop: context);
+
     // Check if passwords match
-    if (password != confirmPassword && formKey.currentState?.validate() != true) {
-      NotificationManager.show(context, context.l10n.passwordsDoNotMatch, NotificationVariant.error);
+    if (password != confirmPassword && formKey.currentState?.validate() != true && globalContext != null) {
+      NotificationManager.show(globalContext, context.l10n.passwordsDoNotMatch, NotificationVariant.error);
       return;
     }
 
