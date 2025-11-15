@@ -30,7 +30,7 @@ abstract class OtpController<T extends StatefulWidget> extends State<T> {
     onTap: () => context.pop(),
     child: Container(
       decoration: BoxDecoration(color: context.color.textFieldBackground, borderRadius: Dimension.rAll8),
-      padding: const EdgeInsets.only(left: 8, right: 4, top: 4, bottom: 4),
+      padding: Dimension.pL8All4,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [

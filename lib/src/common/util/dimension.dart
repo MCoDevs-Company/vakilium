@@ -217,6 +217,7 @@ sealed class Dimension {
   static const pH16Top8Bottom6 = EdgeInsets.only(right: 16, left: 16, bottom: 6, top: 8);
   static const pTop16H16 = EdgeInsets.only(top: 16, right: 16, left: 16);
   static const pBottom16H16 = EdgeInsets.only(bottom: 16, right: 16, left: 16);
+  static const pL8All4 = EdgeInsets.only(left: 8, right: 4, top: 4, bottom: 4);
 
   static const pTop4H24 = EdgeInsets.only(top: 4, right: 24, left: 24);
   static const pTop24H16 = EdgeInsets.only(top: 24, right: 16, left: 16);
