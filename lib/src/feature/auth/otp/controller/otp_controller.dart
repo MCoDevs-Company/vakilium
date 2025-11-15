@@ -6,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import 'package:pinput/pinput.dart';
 import 'package:vakilium/src/common/constant/gen/assets.gen.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
-import 'package:vakilium/src/common/router/router.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
 import 'package:vakilium/src/common/util/logger.dart';
 

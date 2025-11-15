@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:vakilium/src/common/constant/gen/assets.gen.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';

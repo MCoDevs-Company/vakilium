@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/util/logger.dart';
+import 'package:vakilium/src/common/util/notification_manager.dart';
 import 'package:vakilium/src/feature/auth/new_password/screens/new_password_screen.dart';
 
 abstract class NewPasswordController extends State<NewPasswordScreen> {
@@ -49,13 +50,19 @@ abstract class NewPasswordController extends State<NewPasswordScreen> {
     return null;
   }
 
-  void onSubmit() {
+  Future<void> onSubmit() async {
     FocusScope.of(context).unfocus();
-    if (formKey.currentState?.validate() != true) {
+    final password = passwordController.text.trim();
+    final confirmPassword = confirmPasswordController.text.trim();
+
+    // Check if passwords match
+    if (password != confirmPassword && formKey.currentState?.validate() != true) {
+      NotificationManager.show(context, context.l10n.passwordsDoNotMatch, NotificationVariant.error);
       return;
     }
-    final password = passwordController.text.trim();
+
     info('New password confirmed: $password');
+
     // context.goNamed(Routes.home);
   }
 
