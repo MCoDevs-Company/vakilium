@@ -8,6 +8,8 @@ import 'package:vakilium/src/feature/auth/otp/screens/otp_screen.dart';
 import 'package:vakilium/src/feature/auth/register/screens/register_screen.dart';
 import 'package:vakilium/src/feature/auth/user_info/screens/user_info_screen.dart';
 import 'package:vakilium/src/feature/auth/widgets/auth_shell.dart';
+import 'package:vakilium/src/feature/main/screens/home/screens/home_screen.dart';
+import 'package:vakilium/src/feature/main/screens/main_shell.dart';
 import 'package:vakilium/src/feature/splash/screens/splash_screen.dart';
 
 sealed class Routes {
@@ -70,6 +72,21 @@ sealed class Routes {
           ),
         ],
       ),
+      StatefulShellRoute.indexedStack(
+        parentNavigatorKey: rootNavigatorKey,
+        pageBuilder: (context, state, navigationShell) => CustomTransitionPage(
+          child: MainShell(child: navigationShell),
+          transitionDuration: Durations.extralong2,
+          transitionsBuilder: (context, animation, _, child) => FadeTransition(opacity: animation, child: child),
+        ),
+        branches: [
+          StatefulShellBranch(
+            routes: [GoRoute(path: home, name: home, builder: (context, state) => const HomeScreen())],
+          ),
+          // StatefulShellBranch(routes: [GoRoute(path: map, name: map, builder: (context, state) => const MapScreen())]),
+          // StatefulShellBranch(routes: [GoRoute(path: search, name: search, builder: (context, state) => const SearchScreen())]),
+        ],
+      ),
     ],
   );
 
@@ -81,4 +98,7 @@ sealed class Routes {
   static const String newPassword = '/new-password';
   static const String forgotPassword = '/forgot-password';
   static const String recoverOtp = '/recover-otp';
+  static const String home = '/home';
+  static const String map = '/map';
+  static const String search = '/search';
 }

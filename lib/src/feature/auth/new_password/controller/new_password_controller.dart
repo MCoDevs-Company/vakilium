@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/router/router.dart';
 import 'package:vakilium/src/common/util/logger.dart';
@@ -66,7 +67,7 @@ abstract class NewPasswordController extends State<NewPasswordScreen> {
 
     info('New password confirmed: $password');
 
-    // context.goNamed(Routes.home);
+    context.goNamed(Routes.home);
   }
 
   @override

@@ -66,7 +66,7 @@ class _LoginScreenState extends LoginController {
                   ),
                 ),
                 Dimension.hBox24,
-                AppButton(onPressed: () {}, title: context.l10n.loginTitle),
+                AppButton(onPressed: onLoginPressed, title: context.l10n.loginTitle),
                 Dimension.hBox16,
                 AppButton(onPressed: onRegisterPressed, title: context.l10n.registerTitle, isPrimary: false),
               ],

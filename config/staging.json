@@ -1,4 +1,5 @@
 {
   "ENVIRONMENT": "staging",
-  "API_BASE_URL": "https://httpbin.org"
+  "API_BASE_URL": "https://httpbin.org",
+  "YANDEX_MAPKIT_API_KEY": "f567874e-2435-4a87-a867-a634277cfae6"
 }
