@@ -14,7 +14,72 @@ class NewPasswordScreen extends StatefulWidget {
 
 class _NewPasswordScreenState extends NewPasswordController {
   @override
-  Widget build(BuildContext context) => ColoredBox(
+  Widget build(BuildContext context) => context.responsive(mobile: _buildMobile(), desktop: _buildDesktop());
+
+  Widget _buildDesktop() => ColoredBox(
+    color: context.color.white,
+    child: Center(
+      child: SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 480),
+          child: Padding(
+            padding: Dimension.pH40,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  context.l10n.setPasswordTitle,
+                  style: context.textTheme.interW600s24.copyWith(fontSize: 32),
+                  textAlign: TextAlign.start,
+                ),
+                Dimension.hBox32,
+                Form(
+                  key: formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      AppTextField(
+                        autofocus: true,
+                        label: context.l10n.password,
+                        hintText: context.l10n.enterPassword,
+                        controller: passwordController,
+                        textInputAction: TextInputAction.next,
+                        isPasswordField: true,
+                        validator: validatePassword,
+                      ),
+                      Dimension.hBox8,
+                      Text(
+                        context.l10n.minimumCharacters(NewPasswordController.minPasswordLength),
+                        style: context.textTheme.interW400s14.copyWith(color: context.color.hintText),
+                      ),
+                      Dimension.hBox16,
+                      AppTextField(
+                        label: context.l10n.confirmPassword,
+                        hintText: context.l10n.enterPassword,
+                        controller: confirmPasswordController,
+                        textInputAction: TextInputAction.done,
+                        isPasswordField: true,
+                        validator: validateConfirmPassword,
+                      ),
+                    ],
+                  ),
+                ),
+                Dimension.hBox32,
+                ValueListenableBuilder<bool>(
+                  valueListenable: isSubmitEnabled,
+                  builder: (context, isEnabled, child) =>
+                      AppButton(onPressed: isEnabled ? onSubmit : null, title: context.l10n.confirm),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+
+  Widget _buildMobile() => ColoredBox(
     color: context.color.white,
     child: LayoutBuilder(
       builder: (context, constraints) => SingleChildScrollView(

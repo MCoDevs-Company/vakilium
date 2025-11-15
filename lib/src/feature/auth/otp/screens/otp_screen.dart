@@ -33,7 +33,7 @@ class _OtpScreenState extends OtpController {
                   style: context.textTheme.interW600s24.copyWith(fontSize: 32),
                   textAlign: TextAlign.start,
                 ),
-                Dimension.hBox8,
+                Dimension.hBox32,
                 Text(
                   context.l10n.weSendOtpTo,
                   style: context.textTheme.interW400s14.copyWith(color: context.color.hintText),

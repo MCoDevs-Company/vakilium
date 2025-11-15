@@ -73,7 +73,7 @@ class _RegisterScreenState extends RegisterController {
                     return AppButton(onPressed: isEnabled ? onRegister : null, title: context.l10n.registerTitle);
                   },
                 ),
-                Dimension.hBox8,
+                Dimension.hBox16,
                 AppButton(onPressed: onLoginPressed, title: context.l10n.loginTitle, isPrimary: false),
               ],
             ),
