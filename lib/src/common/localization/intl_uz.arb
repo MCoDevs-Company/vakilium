@@ -40,5 +40,10 @@
       }
     }
   },
-  "recoverPassword": "Сброс пароля"
+  "recoverPassword": "Сброс пароля",
+  "profile": "Профиль",
+  "main": "Главная",
+  "services": "Услуги",
+  "requests": "Заявки",
+  "chat": "Чат"
 }

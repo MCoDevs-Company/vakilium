@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "birthDate": MessageLookupByLibrary.simpleMessage("Tug\'ilgan sana"),
         "birthDateHint": MessageLookupByLibrary.simpleMessage("KK.OO.YYYY"),
+        "chat": MessageLookupByLibrary.simpleMessage("Чат"),
         "confirm": MessageLookupByLibrary.simpleMessage("Tasdiqlash"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Parolni tasdiqlang"),
@@ -44,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "localeName": MessageLookupByLibrary.simpleMessage("uz_UZ"),
         "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Kirish"),
+        "main": MessageLookupByLibrary.simpleMessage("Главная"),
         "minimumCharacters": m0,
         "passportFieldHint":
             MessageLookupByLibrary.simpleMessage("AA1234567 | PINFL"),
@@ -54,12 +56,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Parollar mos emas"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Telefon raqam"),
+        "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "recoverPassword": MessageLookupByLibrary.simpleMessage("Сброс пароля"),
         "registerAgreement": MessageLookupByLibrary.simpleMessage(
             "Ro\'yxatdan o\'tish orqali siz foydalanuvchi kelishuvi qoidalariga rozilik bildirasiz"),
         "registerTitle":
             MessageLookupByLibrary.simpleMessage("Ro\'yxatdan o\'tish"),
+        "requests": MessageLookupByLibrary.simpleMessage("Заявки"),
         "resendOtp": MessageLookupByLibrary.simpleMessage("Qayta yuborish"),
+        "services": MessageLookupByLibrary.simpleMessage("Услуги"),
         "setPasswordTitle":
             MessageLookupByLibrary.simpleMessage("Parolni o\'rnatish"),
         "weSendOtpTo": MessageLookupByLibrary.simpleMessage(

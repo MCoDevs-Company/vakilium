@@ -83,8 +83,15 @@ sealed class Routes {
           StatefulShellBranch(
             routes: [GoRoute(path: home, name: home, builder: (context, state) => const HomeScreen())],
           ),
-          // StatefulShellBranch(routes: [GoRoute(path: map, name: map, builder: (context, state) => const MapScreen())]),
-          // StatefulShellBranch(routes: [GoRoute(path: search, name: search, builder: (context, state) => const SearchScreen())]),
+          StatefulShellBranch(
+            routes: [GoRoute(path: services, name: services, builder: (context, state) => const Scaffold())],
+          ),
+          StatefulShellBranch(
+            routes: [GoRoute(path: requests, name: requests, builder: (context, state) => const Scaffold())],
+          ),
+          StatefulShellBranch(
+            routes: [GoRoute(path: chat, name: chat, builder: (context, state) => const Scaffold())],
+          ),
         ],
       ),
     ],
@@ -99,6 +106,7 @@ sealed class Routes {
   static const String forgotPassword = '/forgot-password';
   static const String recoverOtp = '/recover-otp';
   static const String home = '/home';
-  static const String map = '/map';
-  static const String search = '/search';
+  static const String services = '/services';
+  static const String requests = '/requests';
+  static const String chat = '/chat';
 }

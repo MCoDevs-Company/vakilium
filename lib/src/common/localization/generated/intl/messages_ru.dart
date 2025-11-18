@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "birthDate": MessageLookupByLibrary.simpleMessage("Дата рождения"),
         "birthDateHint": MessageLookupByLibrary.simpleMessage("ДД.ММ.ГГГГ"),
+        "chat": MessageLookupByLibrary.simpleMessage("Чат"),
         "confirm": MessageLookupByLibrary.simpleMessage("Подтвердить"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Подтвердите пароль"),
@@ -43,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "localeName": MessageLookupByLibrary.simpleMessage("ru_RU"),
         "localeScriptCode": MessageLookupByLibrary.simpleMessage(""),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Войти"),
+        "main": MessageLookupByLibrary.simpleMessage("Главная"),
         "minimumCharacters": m0,
         "passportFieldHint":
             MessageLookupByLibrary.simpleMessage("AA1234567 | ПИНФЛ"),
@@ -53,11 +55,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Пароли не совпадают"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Номер телефона"),
+        "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "recoverPassword": MessageLookupByLibrary.simpleMessage("Сброс пароля"),
         "registerAgreement": MessageLookupByLibrary.simpleMessage(
             "Регистрируясь, вы соглашаетесь с правилами пользовательского соглашения"),
         "registerTitle": MessageLookupByLibrary.simpleMessage("Регистрация"),
+        "requests": MessageLookupByLibrary.simpleMessage("Заявки"),
         "resendOtp": MessageLookupByLibrary.simpleMessage("Отправить занова"),
+        "services": MessageLookupByLibrary.simpleMessage("Услуги"),
         "setPasswordTitle":
             MessageLookupByLibrary.simpleMessage("Установка пароля"),
         "weSendOtpTo": MessageLookupByLibrary.simpleMessage(

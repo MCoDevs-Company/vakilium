@@ -310,6 +310,56 @@ class GeneratedLocalization {
       args: [],
     );
   }
+
+  /// `Профиль`
+  String get profile {
+    return Intl.message(
+      'Профиль',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Главная`
+  String get main {
+    return Intl.message(
+      'Главная',
+      name: 'main',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Услуги`
+  String get services {
+    return Intl.message(
+      'Услуги',
+      name: 'services',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Заявки`
+  String get requests {
+    return Intl.message(
+      'Заявки',
+      name: 'requests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Чат`
+  String get chat {
+    return Intl.message(
+      'Чат',
+      name: 'chat',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate

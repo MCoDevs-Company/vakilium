@@ -124,6 +124,7 @@ sealed class Dimension {
   static const pH8Top4 = EdgeInsets.only(left: 8, right: 8, top: 4);
   static const pH8V3 = EdgeInsets.symmetric(vertical: 3, horizontal: 8);
   static const pH8V6 = EdgeInsets.symmetric(vertical: 6, horizontal: 8);
+  static const pH8V12 = EdgeInsets.symmetric(horizontal: 8, vertical: 12);
   static const pH16V8 = EdgeInsets.symmetric(vertical: 8, horizontal: 16);
   static const pH14V12 = EdgeInsets.symmetric(vertical: 12, horizontal: 14);
   static const pH16V12 = EdgeInsets.symmetric(vertical: 12, horizontal: 16);
@@ -131,13 +132,14 @@ sealed class Dimension {
   static const pH16V6 = EdgeInsets.symmetric(vertical: 6, horizontal: 16);
   static const pH16V24 = EdgeInsets.symmetric(vertical: 24, horizontal: 16);
   static const pH16V32 = EdgeInsets.symmetric(vertical: 32, horizontal: 16);
+  static const pH24V14 = EdgeInsets.symmetric(horizontal: 24, vertical: 14);
+  static const pH24V16 = EdgeInsets.symmetric(horizontal: 24, vertical: 16);
   static const pV6 = EdgeInsets.symmetric(vertical: 6);
   static const pV2 = EdgeInsets.symmetric(vertical: 2);
   static const pV4 = EdgeInsets.symmetric(vertical: 4);
   static const pV8 = EdgeInsets.symmetric(vertical: 8);
   static const pV10 = EdgeInsets.symmetric(vertical: 10);
   static const pV12 = EdgeInsets.symmetric(vertical: 12);
-  static const pH8V12 = EdgeInsets.symmetric(horizontal: 8, vertical: 12);
   static const pV16 = EdgeInsets.symmetric(vertical: 16);
   static const pV20 = EdgeInsets.symmetric(vertical: 20);
   static const pV24 = EdgeInsets.symmetric(vertical: 24);
@@ -147,7 +149,6 @@ sealed class Dimension {
   static const pV48 = EdgeInsets.symmetric(vertical: 48);
 
   static const pH2 = EdgeInsets.symmetric(horizontal: 2);
-  static const pH24V14 = EdgeInsets.symmetric(horizontal: 24, vertical: 14);
   static const pH4 = EdgeInsets.symmetric(horizontal: 4);
   static const pH6 = EdgeInsets.symmetric(horizontal: 6);
   static const pH8 = EdgeInsets.symmetric(horizontal: 8);
