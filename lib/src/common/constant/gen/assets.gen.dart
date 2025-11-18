@@ -23,6 +23,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/globus.svg
   SvgGenImage get globus => const SvgGenImage('assets/icons/globus.svg');
 
+  /// File path: assets/icons/location.svg
+  SvgGenImage get location => const SvgGenImage('assets/icons/location.svg');
+
   /// File path: assets/icons/logo.svg
   SvgGenImage get logo => const SvgGenImage('assets/icons/logo.svg');
 
@@ -39,7 +42,7 @@ class $AssetsIconsGen {
   SvgGenImage get visibilityOn => const SvgGenImage('assets/icons/visibility_on.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [edit, globus, logo, sun, user, visibilityOff, visibilityOn];
+  List<SvgGenImage> get values => [edit, globus, location, logo, sun, user, visibilityOff, visibilityOn];
 }
 
 class $AssetsImagesGen {

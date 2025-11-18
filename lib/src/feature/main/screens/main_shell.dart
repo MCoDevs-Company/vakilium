@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:vakilium/src/common/util/dimension.dart';
 import 'package:vakilium/src/common/widgets/app_circular_indicator.dart';
 import 'package:vakilium/src/feature/main/cubit/main_cubit.dart';
 import 'package:vakilium/src/feature/main/models/menu_item.dart';
@@ -79,8 +80,10 @@ class _MainShellState extends State<MainShell> {
             child: BlocBuilder<MainCubit, MainState>(
               builder: (context, state) => Column(
                 mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Builder(builder: (context) => const TopBar(menuItems: menuItems)),
+                  Dimension.hBox16,
                   ?state.selectedMenuItem?.page,
                 ],
               ),
