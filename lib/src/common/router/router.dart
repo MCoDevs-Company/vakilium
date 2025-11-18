@@ -8,7 +8,6 @@ import 'package:vakilium/src/feature/auth/otp/screens/otp_screen.dart';
 import 'package:vakilium/src/feature/auth/register/screens/register_screen.dart';
 import 'package:vakilium/src/feature/auth/user_info/screens/user_info_screen.dart';
 import 'package:vakilium/src/feature/auth/widgets/auth_shell.dart';
-import 'package:vakilium/src/feature/main/screens/home/screens/home_screen.dart';
 import 'package:vakilium/src/feature/main/screens/main_shell.dart';
 import 'package:vakilium/src/feature/splash/screens/splash_screen.dart';
 
@@ -72,28 +71,29 @@ sealed class Routes {
           ),
         ],
       ),
-      StatefulShellRoute.indexedStack(
-        parentNavigatorKey: rootNavigatorKey,
-        pageBuilder: (context, state, navigationShell) => CustomTransitionPage(
-          child: MainShell(child: navigationShell),
-          transitionDuration: Durations.extralong2,
-          transitionsBuilder: (context, animation, _, child) => FadeTransition(opacity: animation, child: child),
-        ),
-        branches: [
-          StatefulShellBranch(
-            routes: [GoRoute(path: home, name: home, builder: (context, state) => const HomeScreen())],
-          ),
-          StatefulShellBranch(
-            routes: [GoRoute(path: services, name: services, builder: (context, state) => const Scaffold())],
-          ),
-          StatefulShellBranch(
-            routes: [GoRoute(path: requests, name: requests, builder: (context, state) => const Scaffold())],
-          ),
-          StatefulShellBranch(
-            routes: [GoRoute(path: chat, name: chat, builder: (context, state) => const Scaffold())],
-          ),
-        ],
-      ),
+      GoRoute(path: main, name: main, builder: (context, state) => const MainShell()),
+      // StatefulShellRoute.indexedStack(
+      //   parentNavigatorKey: rootNavigatorKey,
+      //   pageBuilder: (context, state, navigationShell) => CustomTransitionPage(
+      //     child: MainShell(child: navigationShell),
+      //     transitionDuration: Durations.extralong2,
+      //     transitionsBuilder: (context, animation, _, child) => FadeTransition(opacity: animation, child: child),
+      //   ),
+      //   branches: [
+      //     StatefulShellBranch(
+      //       routes: [GoRoute(path: home, name: home, builder: (context, state) => const HomeScreen())],
+      //     ),
+      //     StatefulShellBranch(
+      //       routes: [GoRoute(path: services, name: services, builder: (context, state) => const Scaffold())],
+      //     ),
+      //     StatefulShellBranch(
+      //       routes: [GoRoute(path: requests, name: requests, builder: (context, state) => const Scaffold())],
+      //     ),
+      //     StatefulShellBranch(
+      //       routes: [GoRoute(path: chat, name: chat, builder: (context, state) => const Scaffold())],
+      //     ),
+      //   ],
+      // ),
     ],
   );
 
@@ -105,8 +105,8 @@ sealed class Routes {
   static const String newPassword = '/new-password';
   static const String forgotPassword = '/forgot-password';
   static const String recoverOtp = '/recover-otp';
-  static const String home = '/home';
-  static const String services = '/services';
-  static const String requests = '/requests';
-  static const String chat = '/chat';
+  static const String main = '/main';
+  // static const String services = '/services';
+  // static const String requests = '/requests';
+  // static const String chat = '/chat';
 }

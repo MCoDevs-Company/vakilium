@@ -67,7 +67,7 @@ abstract class NewPasswordController extends State<NewPasswordScreen> {
 
     info('New password confirmed: $password');
 
-    context.goNamed(Routes.home);
+    context.goNamed(Routes.main); 
   }
 
   @override
