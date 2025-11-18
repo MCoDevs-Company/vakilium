@@ -5,7 +5,6 @@ import 'package:vakilium/src/common/constant/gen/assets.gen.dart';
 import 'package:vakilium/src/common/extension/context_extension.dart';
 import 'package:vakilium/src/common/router/router.dart';
 import 'package:vakilium/src/common/util/dimension.dart';
-import 'package:vakilium/src/common/util/logger.dart';
 import 'package:vakilium/src/common/widgets/app_logo.dart';
 
 class MainShell extends StatefulWidget {
